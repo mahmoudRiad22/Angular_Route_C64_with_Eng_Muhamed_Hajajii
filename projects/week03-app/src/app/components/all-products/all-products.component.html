@@ -1,0 +1,45 @@
+<div class="vh-100 bg-dark-subtle mt-5">
+  <h2 class="text-center">all-products</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 ps-5">
+        <ul>
+          <li>
+            <a
+              class="text-decoration-none text-black"
+              routerLinkActive="bg-success"
+              routerLink="mobile"
+              >mobiles</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-decoration-none text-black"
+              routerLinkActive="bg-success"
+              routerLink="table"
+              >tables</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-decoration-none text-black"
+              routerLinkActive="bg-success"
+              routerLink="laptop"
+              >laptops</a
+            >
+          </li>
+          <li>
+            <a class="text-decoration-none text-black" routerLinkActive="bg-success" routerLink="tv"
+              >Tvs</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <p>//add the router placeholders</p>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

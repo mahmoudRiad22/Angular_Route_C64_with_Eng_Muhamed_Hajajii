@@ -94,7 +94,12 @@
     },
     "week03-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
+        }
+      },
       "root": "projects/week03-app",
       "sourceRoot": "projects/week03-app/src",
       "prefix": "app",
