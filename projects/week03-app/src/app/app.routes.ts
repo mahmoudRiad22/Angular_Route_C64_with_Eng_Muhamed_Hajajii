@@ -51,6 +51,11 @@ export const routes: Routes = [
     title:'all-products',
     children:[
       {
+        path:'',
+        redirectTo:'allProducts',
+        pathMatch:'full'
+      },
+      {
         path:'mobile',
         component:MobileComponent
       },

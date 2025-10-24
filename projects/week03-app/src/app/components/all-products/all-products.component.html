@@ -8,7 +8,8 @@
           <li>
             <a
               class="text-decoration-none text-black"
-              routerLinkActive="bg-success"
+              routerLinkActive="bg-warning-subtle rounded-2 px-1"
+              [routerLinkActiveOptions]="{exact:true}"
               routerLink="mobile"
               >mobiles</a
             >
@@ -16,28 +17,26 @@
           <li>
             <a
               class="text-decoration-none text-black"
-              routerLinkActive="bg-success"
+              routerLinkActive="bg-warning-subtle rounded-2 px-1"
               routerLink="table"
-              >tables</a
-            >
+              >tables</a>
           </li>
           <li>
             <a
               class="text-decoration-none text-black"
-              routerLinkActive="bg-success"
+              routerLinkActive="bg-warning-subtle rounded-2 px-1"
               routerLink="laptop"
               >laptops</a
             >
           </li>
           <li>
-            <a class="text-decoration-none text-black" routerLinkActive="bg-success" routerLink="tv"
+            <a class="text-decoration-none text-black" routerLinkActive="bg-warning-subtle rounded-2 px-1" routerLink="tv"
               >Tvs</a
             >
           </li>
         </ul>
       </div>
       <div class="col-md-8">
-        <p>//add the router placeholders</p>
         <router-outlet></router-outlet>
       </div>
     </div>
