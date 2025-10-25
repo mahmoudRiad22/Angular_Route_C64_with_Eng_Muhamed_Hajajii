@@ -1,9 +1,26 @@
 <section class="py-5">
     <div class="bg-success-subtle">
-        <h1 class="text-center fw-bold fs-1 text-capitalize p-2">handling images</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 class="text-center fw-bold fs-1 text-capitalize pb-3 py-1">Generate images</h1>
+            <a class="btn btn-primary h-100 mx-2" routerLink="/imageHandling" >Generate</a>
+        </div>
+        <h5 class="text-center">task: render 6 images randomly from the images folder</h5>
     </div>
+    <div class="image text-center">
+        <p>{{ createImages() }}</p>
 
-    <div class="image">
-        <img [src]="images[0]" alt="imgi_11_lottery.jpg"/>
+        <div class="main-view">
+            <img [src]="images[0]" [alt]="imagesAlts[0]" />
+        </div>
+        <!-- <p>images array size is : {{images.length}}</p> -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row justify-content-evenly">
+                    @for (i of images.slice(1); track $index) {
+                    <img class="col-4" [src]="i" [alt]="imagesAlts[$index + 1]" />
+                    }
+                </div>
+            </div>
+        </div>
     </div>
 </section>
