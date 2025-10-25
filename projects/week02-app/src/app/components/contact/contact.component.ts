@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+base = "../../../../public/images/"
+imgUrl = this.base.slice(18)
+images:string[] = [
+  `${this.imgUrl}55.jpg`,
+
+]
 }
