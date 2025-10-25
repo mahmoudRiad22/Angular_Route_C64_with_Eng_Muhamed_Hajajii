@@ -12,7 +12,10 @@ export class ImageHandlingComponent {
     imgUrl = this.base.slice(18);
     images: string[] = [];
     imagesAlts:string[] = [];
-    // Returns: 1 to 61 (inclusive)
+
+    ngOnInit():void{
+        this.createImages()
+    }
     createImages(): void {
         this.images = [];
         this.imagesAlts =[];
@@ -23,5 +26,4 @@ export class ImageHandlingComponent {
         }
         console.log('this.images :>> ', this.images);
     }
-    // imagesAlts: string[] = [`${this.images[0].slice(8)}`];
 }
