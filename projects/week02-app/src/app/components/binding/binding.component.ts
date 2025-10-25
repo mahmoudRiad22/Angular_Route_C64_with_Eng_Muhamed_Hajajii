@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { AbstractFormGroupDirective } from '@angular/forms';
 
 @Component({
-    selector: 'app-home',
-    imports: [],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css',
+  selector: 'app-binding',
+  imports: [],
+  templateUrl: './binding.component.html',
+  styleUrl: './binding.component.css',
 })
-export class HomeComponent {
-    msg: string = 'this msg came from inside the TS file';
+export class BindingComponent {
+msg: string = 'this msg came from inside the TS file';
 
     private Name: string = 'MahmoudRiad';
     private Age: number = 30;

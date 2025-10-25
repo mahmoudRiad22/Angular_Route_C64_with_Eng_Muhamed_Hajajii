@@ -1,14 +1,20 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { BindingComponent } from './components/binding/binding.component';
+import { ImageHandlingComponent } from './components/image-handling/image-handling.component';
 
 export const routes: Routes = [
+
+    /** 
+     * //todo: wild path
+     * //todo: redirect for no path entry to be binding path
+     * //todo: path for control flow component
+     */
     {
         path:'binding',
-        component:HomeComponent
+        component:BindingComponent
     },
     {
         path:'imageHandling',
-        component:ContactComponent
+        component:ImageHandlingComponent
     }
 ];
