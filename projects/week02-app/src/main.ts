@@ -1,12 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { App } from './app/app';
-import { compileNgModule, CssSelector, escapeRegExp, ReturnStatement } from '@angular/compiler';
-import { NgModel, NumberValueAccessor, UntypedFormBuilder } from '@angular/forms';
-import { elementAt } from 'rxjs';
-import { SlicePipe } from '@angular/common';
-import { UrlMatchResult } from '@angular/router';
-import { setUpLocationSync } from '@angular/router/upgrade';
+import { appConfig } from './app/app.config';
 
 bootstrapApplication(App, appConfig).catch((err) => console.error(err));
 
