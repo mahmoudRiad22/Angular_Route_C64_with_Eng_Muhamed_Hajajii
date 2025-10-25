@@ -5,4 +5,9 @@
 }
 .bottom-bar img{
     width: 250px;
+    transition: transform .25s ease-in;
+}
+.bottom-bar img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
