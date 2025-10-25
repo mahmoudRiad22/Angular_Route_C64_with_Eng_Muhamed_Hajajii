@@ -1,6 +1,6 @@
 <section id="" class="pt-5">
     <div class="container">
-        <div class="min-vh-100">
+        <div class="one-way-data-binding min-vh-100">
             <h1 class="text-center bg bg-danger m-0 p-2">week02-app works fine!!</h1>
             <h2 class="text-center fs-2 fw-bold bg-warning-subtle m-0 p-2">
                 one way data binding example
@@ -8,14 +8,27 @@
             <div class="bg-primary-subtle p-3 fs-4">
                 <ol>
                     <li>
-                        text binding [text interpolation]: <br />
-                        "{{ msg }}"
+                        <b> text binding [text interpolation]: </b>
+                        <ul>
+                            <li>"{{ msg }}"</li>
+                            <li>hello, {{ userName }}</li>
+                            <li>you live in: {{ userAddress }}</li>
+                            <li>you are {{ userAge }} years old!</li>
+                        </ul>
                     </li>
-                    <li>hello, {{ userName }}</li>
-                    <li>you live in: {{ userAddress }}</li>
-                    <li>you are {{ userAge }} years old!</li>
+                    <li><b>tag property binding:</b> [src], [value], [alt]</li>
+                    <li><b>attribute binding</b> [attr.data-bs-target], [attr.aria-label]</li>
+                    <li><b>event binding</b> (click), (mousemove), (keyup)</li>
+                    <li><b>class binding</b> [class]</li>
+                    <li><b>style binding</b> [style]</li>
                 </ol>
             </div>
+        </div>
+        <div class="two-way-data-binding">
+            <h2 class="bg-warning-subtle m-0 fw-bold p-2 text-center">two way data binding</h2>
+            <ul><li>
+              <b>using <i>ngModel</i>: "banana in the box" [()]</b>
+            </li></ul>
         </div>
     </div>
 </section>
