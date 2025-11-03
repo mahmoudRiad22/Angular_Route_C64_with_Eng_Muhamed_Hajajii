@@ -1,10 +1,8 @@
-import { RouterLinkActive, RouterLink } from '@angular/router';
-import { Component, provideZoneChangeDetection } from '@angular/core';
-import { TaggedTemplateLiteral } from '@angular/compiler';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-image-handling',
-    imports: [RouterLink],
+    imports: [],
     templateUrl: './image-handling.component.html',
     styleUrl: './image-handling.component.css',
 })
@@ -13,7 +11,7 @@ export class ImageHandlingComponent {
     imgUrl = this.base.slice(18);
     images: string[] = [];
     imagesAlts: string[] = [];
-
+    flag: boolean = true;
     ngOnInit(): void {
         this.createImages();
     }
@@ -38,4 +36,9 @@ export class ImageHandlingComponent {
         }
         // console.log('this.images :>> ', this.images);
     }
+
+    changeBgColor() {
+        this.flag ? (this.flag = false) : (this.flag = true);
+    }
+    
 }

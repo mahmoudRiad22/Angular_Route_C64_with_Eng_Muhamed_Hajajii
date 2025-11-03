@@ -4,31 +4,32 @@ import { ImageHandlingComponent } from './components/image-handling/image-handli
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
-
-    /** 
-     * //todo: wild path
-     * //todo: redirect for no path entry to be binding path
-     * //todo: path for control flow component
+    /**
+     * //todo: wild  ✅
+     * //todo: redirect for no path entry to be binding path ✅
+     * //todo: path for control flow component ❌
      */
     {
-        path:'',
-        redirectTo:'binding',
-        pathMatch:'full'
+        path: '',
+        component: BindingComponent,
     },
     {
-        path:'binding',
-        component:BindingComponent
+        path: 'binding',
+        // component: BindingComponent,
+
+        redirectTo: '',
+        pathMatch: 'full',
     },
     {
-        path:'imageHandling',
-        component:ImageHandlingComponent
+        path: 'imageHandling',
+        component: ImageHandlingComponent,
     },
     {
-        path:'not-found',
-        component:NotFoundComponent
+        path: 'not-found',
+        component: NotFoundComponent,
     },
     {
-        path:'**',
-        redirectTo:"not-found"
-    }
+        path: '**',
+        redirectTo: 'not-found',
+    },
 ];

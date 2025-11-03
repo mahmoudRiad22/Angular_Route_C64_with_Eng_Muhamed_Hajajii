@@ -1,4 +1,8 @@
-<section class="py-5 bg-dark-subtle overflow-hidden">
+<section [class]="flag ? 'bg-dark-subtle' : 'bg-danger-subtle'" class="py-5 overflow-hidden">
+    <button
+        (click)="changeBgColor()"
+        class="btn btn-primary p-1 rounded-3 position-fixed end-0 bottom-0 mb-1 me-1"
+    >theme</button>
     <div class="d-flex justify-content-center align-items-center">
         <h1 class="text-center fw-bold fs-1 text-capitalize pb-3 py-1">Generate images</h1>
         <button class="btn btn-primary h-100 mx-2" (click)="createImages()">Generate</button>

@@ -390,3 +390,18 @@ bootstrapApplication(App, appConfig).catch((err) => console.error(err));
     }
 
 }
+
+//!Session02 Notes:
+{
+    /**
+     * !Overview:
+     * >>Binding:
+     *      >> text binding {{}}
+     *      >> Image Handling in angular "src = '/images/'", url('./images/')
+     *      >> Property<tag defined attributes: src, value, href> binding [src]=''
+     *      >> Attribute <build-in attr or custom attr> [attr.custom-attr] = ''
+     *      >> event binding:  (click)='someFunction($event)'
+     *      >> class binding: [class]="" or [class]= ['','',''] or [class]='{'':true, 'key':'value'}'
+     *      >> style binding:
+     */
+}
