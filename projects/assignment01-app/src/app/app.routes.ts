@@ -28,8 +28,12 @@ export const routes: Routes = [
         title: 'Contact',
     },
     {
-        path: '**',
+        path: 'not-found',
         component: NotFoundComponent,
         title: 'Not-Found',
+    },
+    {
+        path: '**',
+        redirectTo: 'not-found',
     },
 ];
