@@ -3,11 +3,12 @@
 }
 .star-icon{
     position: relative;
+    color: #2C3E50;
 }
 
 .star-icon::before{
     content: '';
-    background-color: black;
+    background-color: #2C3E50;
     width: 100px;
     height: 3px;
 
@@ -20,7 +21,7 @@
 
 .star-icon::after{
     content: '';
-    background-color: black;
+    background-color: #2C3E50;
     width: 100px;
     height: 3px;
 

@@ -1,0 +1,32 @@
+.green-bg{
+    background-color: #1ABC9C;
+}
+.star-icon{
+    position: relative;
+}
+
+.star-icon::before{
+    content: '';
+    background-color: white;
+    width: 100px;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+    left: 52%;
+
+    border-radius: 10px;
+}
+
+.star-icon::after{
+    content: '';
+    background-color: white;
+    width: 100px;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+    right: 52%;
+
+    border-radius: 10px;
+}
