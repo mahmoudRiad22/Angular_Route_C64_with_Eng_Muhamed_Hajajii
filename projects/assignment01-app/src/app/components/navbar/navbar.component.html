@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg nav-bg navbar-dark fixed-top py-lg-4">
     <div class="container">
-        <a class="navbar-brand text-uppercase" routerLink="" routerLinkActive="bg-success">start framework</a>
+        <a class="navbar-brand text-uppercase" routerLink="" routerLinkActive="">start framework</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link  text-white rounded-3 text-uppercase"  routerLink="/about" routerLinkActive="green-bg">about</a>
+                    <a class="nav-link  text-white rounded-3 text-uppercase" [routerLinkActiveOptions]="{exact: true}"  routerLink="/about" routerLinkActive="green-bg">about</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-white rounded-3 text-uppercase"  routerLink="portfolio" routerLinkActive="green-bg">portfolio</a>
