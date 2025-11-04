@@ -38,20 +38,10 @@
     border-radius: 10px;
 }
 
-.label-transition {
-    color: #1abc9c;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.label-hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-}
 
 .userName-label-transition {
     color: #1abc9c;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.1s , transform 0.5s ease;
 }
 
 .userName-label-hidden {
@@ -62,7 +52,7 @@
 
 .userAge-label-transition {
     color: #1abc9c;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.1s , transform 0.5s ease;
 }
 
 .userAge-label-hidden {
@@ -73,7 +63,7 @@
 
 .userEmail-label-transition {
     color: #1abc9c;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.1s , transform 0.5s ease;
 }
 
 .userEmail-label-hidden {
@@ -84,7 +74,7 @@
 
 .userPassword-label-transition {
     color: #1abc9c;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.1s , transform 0.5s ease;
 }
 
 .userPassword-label-hidden {
