@@ -1,0 +1,94 @@
+.star-icon {
+    position: relative;
+    color: #2c3e50;
+}
+.green-btn-bg {
+    background-color: #1abc9c;
+}
+.green-btn-bg:focus {
+    background-color: #1abc9c;
+}
+
+.focus-ring-success {
+    --bs-focus-ring-color: rgba(26, 188, 156, var(--bs-focus-ring-opacity));
+}
+.star-icon::before {
+    content: '';
+    background-color: #2c3e50;
+    width: 100px;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+    left: 52%;
+
+    border-radius: 10px;
+}
+
+.star-icon::after {
+    content: '';
+    background-color: #2c3e50;
+    width: 100px;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+    right: 52%;
+
+    border-radius: 10px;
+}
+
+.label-transition {
+    color: #1abc9c;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.label-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.userName-label-transition {
+    color: #1abc9c;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.userName-label-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.userAge-label-transition {
+    color: #1abc9c;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.userAge-label-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.userEmail-label-transition {
+    color: #1abc9c;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.userEmail-label-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.userPassword-label-transition {
+    color: #1abc9c;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.userPassword-label-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}

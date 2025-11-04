@@ -1,1 +1,80 @@
-<p>contact works!</p>
+<section class="mt-5 green-bg">
+    <div class="container pt-5">
+        <div class=" ">
+            <h2 class="text-uppercase fw-bold text-center pt-5">contact components</h2>
+            <div class="text-center star-icon p-3">
+                <i class="fa-solid fa-star mx-2"></i>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pb-5">
+            <div class="w-50">
+                <div class="userName mb-3">
+                    <label
+                        for="userName"
+                        class="form-label userName-label-transition"
+                        [class.userName-label-hidden]="userNameActive"
+                    >
+                        User Name
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control focus-ring focus-ring-success border-0"
+                        id="userName"
+                        placeholder="userName"
+                        (input)="showUserNameLabel($event)"
+                    />
+                </div>
+                <div class="userAge mb-3">
+                    <label
+                        for="userAge"
+                        class="form-label userAge-label-transition"
+                        [class.userAge-label-hidden]="userAgeActive"
+                    >
+                        User Age
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control focus-ring focus-ring-success border-0"
+                        id="userAge"
+                        placeholder="userAge"
+                        (input)="showUserAgeLabel($event)"
+                    />
+                </div>
+                <div class="userEmail mb-3">
+                    <label
+                        for="userEmail"
+                        class="form-label userEmail-label-transition"
+                        [class.userEmail-label-hidden]="userEmailActive"
+                    >
+                        User Email
+                    </label>
+                    <input
+                        type="email"
+                        class="form-control focus-ring focus-ring-success border-0"
+                        id="userEmail"
+                        placeholder="userEmail"
+                        (input)="showUserEmailLabel($event)"
+                    />
+                </div>
+                <div class="userPassword mb-3">
+                    <label
+                        for="userPassword"
+                        class="form-label userPassword-label-transition"
+                        [class.userPassword-label-hidden]="userPasswordActive"
+                    >
+                        User Password
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control focus-ring focus-ring-success border-0"
+                        id="userPassword"
+                        placeholder="userPassword"
+                        (input)="showUserPasswordLabel($event)"
+                    />
+                </div>
+
+                <button class="text-capitalize btn text-white green-btn-bg">send message</button>
+            </div>
+        </div>
+    </div>
+</section>
