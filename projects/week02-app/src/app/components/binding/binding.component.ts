@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-binding',
-  imports: [],
-  templateUrl: './binding.component.html',
-  styleUrl: './binding.component.css',
+    selector: 'app-binding',
+    imports: [],
+    templateUrl: './binding.component.html',
+    styleUrl: './binding.component.css',
 })
 export class BindingComponent {
-msg: string = 'this msg came from inside the TS file';
+    msg: string = 'this msg came from inside the TS file';
 
     private Name: string = 'MahmoudRiad';
     private Age: number = 30;
     private Address: string = '106, Tanta Egypt';
-
+    isLoading = false
+    x = 4; y = 0
     get userName(): string {
         return this.Name;
     }

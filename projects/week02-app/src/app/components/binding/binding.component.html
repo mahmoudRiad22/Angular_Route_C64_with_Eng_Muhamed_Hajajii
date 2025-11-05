@@ -26,9 +26,84 @@
         </div>
         <div class="two-way-data-binding">
             <h2 class="bg-warning-subtle m-0 fw-bold p-2 text-center">two way data binding</h2>
-            <ul><li>
-              <b>using <i>ngModel</i>: "banana in the box" [()]</b>
-            </li></ul>
+            <ul>
+                <li>
+                    <b>using <i>ngModel</i>: "banana in the box" [()]</b>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
+
+<!-- ****************************** -->
+<!-- ****************************** -->
+<!-- #region Summary -->
+<!-- 
+>> Text binding:
+* is basically dump the value property from the "TS file" into the "html" as a string always.
+
+>> Property binding:
+* Directly change the attribute value using the square brackets [attribute]="property from TS file"
+* it can have "type" like {boolean, number, string, object, array, etc.}
+* always use with known and non-custom attributes.
+
+>> Attribute binding:
+* change the value of the attribute as a sting always using the prefix 'attr.'
+* always use it when dealing with custom attributes like "ARIA" or "data-*" .
+
+-- example:
+Property Binding (Correct) -->
+<button [disabled]="isLoading" class="btn btn-primary">Submit</button>
+<!-- Angular passes the boolean directly to DOM property -->
+
+<!-- Attribute Binding (Wrong for this case) -->
+<button [attr.disabled]="isLoading" class="btn btn-primary">Submit</button>
+<!-- actually sees the isLoading as a string which is a truthy value hence the disabled is true -->
+<!-- This would set disabled="true" (string)
+
+>> Event binding:
+* used to link an "html event" with a "TS method".
+* replaces the old addEventListener() before.
+
+>> Class binding: 
+    >> [class]="stringExpression, booleanExpression, array, object {'class-name': booleanValue}"
+    >> [class.class-name] = 'condition or booleanExpression'
+    >> [ngClass] = 'expression' -->
+<!-- !this is deprecated and added to the [class] binding
+
+    -- class binding "property 'class' binding": [class]='string expression'
+        -- its an all-or-nothing as it replaces all the previous value with the expression provided.
+    
+    -- class binding to a specific class: [class.class-name] = 'condition or booleanExpression'
+        -- this is a single class binding, you add or remove the specific class based on the evaluation of the condition.
+        -- ex: [class.special] = 'isSpecial' or '(x == y)? true: false'
+        Example -->
+<p class="text-center bg-warning" [class.bg-danger]="x == y ? true : false">
+    this will be danger if the condition is 'true' otherwise it will be warning
+</p>
+<!--
+    -- multi-class binding: [ngClass] = 'expression'
+        -- expression can be {string, array, object[keys are css class, values are booleanExpressions], condition}
+
+>> Style binding: 'dot notation' or 'object'
+    -- [style.property-name] = 'value'
+    -- [style] = {
+--        'style-property': 'value',
+--    } 
+
+* Example -->
+<h2
+    [style.background-color]="'violet'"
+    class="p-3"
+    [style]="{
+        'background-color': 'darkblue',
+        color: 'white'
+    }"
+    [class]="['text-center', 'text-capitalize', 'text-dark']"
+>
+    this is a text adjusted with style binding
+</h2>
+
+<!-- #endregion Summary -->
+<!-- ****************************** -->
+<!-- ****************************** -->
