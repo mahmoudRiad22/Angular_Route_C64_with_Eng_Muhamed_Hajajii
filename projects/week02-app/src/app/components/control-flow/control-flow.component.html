@@ -53,7 +53,7 @@
 
         <!-- todo 02: create cards to display the fakeUserData -->
         <div class="p-4 pb-0 m-0 text-center">
-            <h3 class="text-danger">1- &#64;for with &#64;if condition:</h3>
+            <h3 class="text-danger">2- &#64;for with &#64;if condition:</h3>
         </div>
         <div class="container p-5 pt-3">
             <div class="row g-4">
@@ -154,7 +154,9 @@
         </div>
 
         <!-- todo 03: create a select options to switch between 4 cases -->
-        <div class="">
+        <div class="p-5 text-center">
+            <h3 class="text-danger">3- &#64;Switch</h3>
+
             <div class="d-flex justify-content-center p-3">
                 <select
                     #bgSelection
@@ -162,30 +164,64 @@
                     (change)="changeBgColor(bgSelection.value)"
                 >
                     <option value="choose a color" hidden>choose a color</option>
-                    <option value="bg0">default bg</option>
-                    <option value="bg1">yellow bg</option>
-                    <option value="bg2">red bg</option>
-                    <option value="bg3">dark bg</option>
-                    <option value="bg4">green bg</option>
-                    <option value="bg5">blue bg</option>
+                    <option value="bg0" class="bg-secondary">grey</option>
+                    <option value="bg1" class="bg-warning">yellow</option>
+                    <option value="bg2" class="bg-danger">red</option>
+                    <option value="bg3" class="bg-dark">dark</option>
+                    <option value="bg4" class="bg-success">green</option>
+                    <option value="bg5" class="bg-info">cyan</option>
                 </select>
             </div>
+
+            <!-- dropdownStructure: [dropdown-div, dropdown-toggle-btn, dropdown-menu-ul, li-dropdown-item] -->
+            <div class="d-flex justify-content-center p-3">
+                <div class="dropdown-center w-25">
+                    <button
+                        class="dropdown-toggle btn btn-primary"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                    >
+                        choose a color
+                    </button>
+
+                    <ul class="dropdown-menu w-100 p-0">
+                        <li class="bg-secondary">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                        <li class="bg-warning">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                        <li class="bg-danger">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                        <li class="bg-dark">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                        <li class="bg-success">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                        <li class="bg-info">
+                            <a class="dropdown-item p-3"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             @switch (bgColor) { @default {
-            <h3 class="rounded-4 text-center p-3 bg-secondary" [class]="bgColor" >
+            <h3 class="rounded-4 p-3 bg-secondary" [class]="bgColor">
                 this is a one sentence to change its color
             </h3>
             } @case ('bg1') {
-            <h3 class="rounded-4 text-center p-3 bg-warning">this is a one sentence to change its color</h3>
+            <h3 class="rounded-4 p-3 bg-warning">this is a one sentence to change its color</h3>
             } @case ('bg2') {
-            <h3 class="rounded-4 text-center p-3 bg-danger">this is a one sentence to change its color</h3>
+            <h3 class="rounded-4 p-3 bg-danger">this is a one sentence to change its color</h3>
             } @case ('bg3') {
-            <h3 class="rounded-4 text-center p-3 bg-dark text-white">
+            <h3 class="rounded-4 p-3 bg-dark text-white">
                 this is a one sentence to change its color
             </h3>
             } @case ('bg4') {
-            <h3 class="rounded-4 text-center p-3 bg-success">this is a one sentence to change its color</h3>
+            <h3 class="rounded-4 p-3 bg-success">this is a one sentence to change its color</h3>
             } @case ('bg5') {
-            <h3 class="rounded-4 text-center p-3 bg-info">this is a one sentence to change its color</h3>
+            <h3 class="rounded-4 p-3 bg-info">this is a one sentence to change its color</h3>
             } }
         </div>
     </div>
