@@ -19,3 +19,6 @@
 .green-bg {
     background-color: #1abc9c;
 }
+nav{
+transition: .5s ease;
+}
