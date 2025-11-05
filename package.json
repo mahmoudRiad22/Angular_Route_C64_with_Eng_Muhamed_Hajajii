@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "i:all": "npm i bootstrap && npm i @fortawesome/fontawesome-free"
+    "i:bs": "npm i bootstrap",
+    "i:faw": "npm i @fortawesome/fontawesome-free"
   },
   "prettier": {
     "tabWidth": 4,
@@ -31,6 +32,8 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
