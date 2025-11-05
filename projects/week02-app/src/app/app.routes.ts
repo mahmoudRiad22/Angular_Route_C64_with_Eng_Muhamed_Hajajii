@@ -12,21 +12,22 @@ export const routes: Routes = [
     {
         path: '',
         component: BindingComponent,
+        title: 'Binding',
     },
     {
         path: 'binding',
-        // component: BindingComponent,
-
         redirectTo: '',
         pathMatch: 'full',
     },
     {
         path: 'imageHandling',
         component: ImageHandlingComponent,
+        title: 'imageHandling',
     },
     {
         path: 'not-found',
         component: NotFoundComponent,
+        title: 'not-found',
     },
     {
         path: '**',
