@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { BindingComponent } from './components/binding/binding.component';
 import { ImageHandlingComponent } from './components/image-handling/image-handling.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HostListenerComponent } from './components/host-listener/host-listener.component';
 
 export const routes: Routes = [
     /**
@@ -23,6 +24,11 @@ export const routes: Routes = [
         path: 'imageHandling',
         component: ImageHandlingComponent,
         title: 'imageHandling',
+    },
+    {
+        path:'hostListener',
+        component:HostListenerComponent,
+        title:"HostListener"
     },
     {
         path: 'not-found',
