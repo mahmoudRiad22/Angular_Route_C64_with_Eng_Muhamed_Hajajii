@@ -3,6 +3,7 @@ import { BindingComponent } from './components/binding/binding.component';
 import { ImageHandlingComponent } from './components/image-handling/image-handling.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HostListenerComponent } from './components/host-listener/host-listener.component';
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 
 export const routes: Routes = [
     /**
@@ -29,6 +30,11 @@ export const routes: Routes = [
         path:'hostListener',
         component:HostListenerComponent,
         title:"HostListener"
+    },
+    {
+        path:'controlFlow',
+        component:ControlFlowComponent,
+        title:"controlFlow"
     },
     {
         path: 'not-found',
