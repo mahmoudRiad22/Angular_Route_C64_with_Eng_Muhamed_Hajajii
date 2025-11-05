@@ -152,5 +152,41 @@
                 }
             </div>
         </div>
+
+        <!-- todo 03: create a select options to switch between 4 cases -->
+        <div class="">
+            <div class="d-flex justify-content-center p-3">
+                <select
+                    #bgSelection
+                    class="form-select w-25 bg-dark text-white p-2 text-center focus-ring focus-ring-light"
+                    (change)="changeBgColor(bgSelection.value)"
+                >
+                    <option value="choose a color" hidden>choose a color</option>
+                    <option value="bg0">default bg</option>
+                    <option value="bg1">yellow bg</option>
+                    <option value="bg2">red bg</option>
+                    <option value="bg3">dark bg</option>
+                    <option value="bg4">green bg</option>
+                    <option value="bg5">blue bg</option>
+                </select>
+            </div>
+            @switch (bgColor) { @default {
+            <h3 class="rounded-4 text-center p-3 bg-secondary" [class]="bgColor" >
+                this is a one sentence to change its color
+            </h3>
+            } @case ('bg1') {
+            <h3 class="rounded-4 text-center p-3 bg-warning">this is a one sentence to change its color</h3>
+            } @case ('bg2') {
+            <h3 class="rounded-4 text-center p-3 bg-danger">this is a one sentence to change its color</h3>
+            } @case ('bg3') {
+            <h3 class="rounded-4 text-center p-3 bg-dark text-white">
+                this is a one sentence to change its color
+            </h3>
+            } @case ('bg4') {
+            <h3 class="rounded-4 text-center p-3 bg-success">this is a one sentence to change its color</h3>
+            } @case ('bg5') {
+            <h3 class="rounded-4 text-center p-3 bg-info">this is a one sentence to change its color</h3>
+            } }
+        </div>
     </div>
 </section>

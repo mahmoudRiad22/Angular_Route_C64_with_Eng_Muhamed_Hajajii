@@ -1,3 +1,4 @@
+import { TypeModifier } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
     styleUrl: './control-flow.component.css',
 })
 export class ControlFlowComponent {
+    bgColor!:string
     // id, first_name, last_name, email, gender, ip_address, car_model, car_vin
     UsersData: IUser[] = [
         {
@@ -656,6 +658,12 @@ export class ControlFlowComponent {
     ];
     // UsersData: IUser[] =[]
     // persons:Iperson[] = []
+
+    changeBgColor(bgColor:string): void {
+        // const bgColor: HTMLElement = document.getElementById('bgSelection') as HTMLElement;
+        console.log(bgColor, typeof bgColor);
+        this.bgColor = bgColor        
+    }
 }
 
 interface Iperson {
