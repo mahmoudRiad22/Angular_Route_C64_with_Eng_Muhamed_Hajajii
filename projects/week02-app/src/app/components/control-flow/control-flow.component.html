@@ -6,7 +6,6 @@
         </div>
 
         <!-- todo 01: create a table that view data from array 'data' and all the contextual variables -->
-
         <div class="p-4 text-center">
             <h3 class="text-danger">1- &#64;for and the 6 contextual variables:</h3>
         </div>
@@ -14,7 +13,7 @@
         <div class="container d-flex justify-content-center">
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-info">
-                    <thead  class="text-center">
+                    <thead class="text-center">
                         <tr>
                             <th>#Id</th>
                             <th>Avatar</th>
@@ -28,7 +27,7 @@
                             <th>Last</th>
                         </tr>
                     </thead>
-                    <tbody   class="text-center">
+                    <tbody class="text-center">
                         @for (person of persons; track $index) {
                         <tr>
                             <th>{{ person.id }}</th>
@@ -42,6 +41,10 @@
                             <th>{{ $first }}</th>
                             <th>{{ $last }}</th>
                         </tr>
+                        }@empty {
+                        <div class="alert alert-danger p-5 text-center">
+                            <h2>No Data Found</h2>
+                        </div>
                         }
                     </tbody>
                 </table>
@@ -49,7 +52,6 @@
         </div>
 
         <!-- todo 02: create cards to display the fakeUserData -->
-
         <div class="p-4 pb-0 m-0 text-center">
             <h3 class="text-danger">1- &#64;for with &#64;if condition:</h3>
         </div>
@@ -60,7 +62,7 @@
                     @if (user.car_model === null) {
                     <div class="card h-100 rounded-3 bg-danger-subtle p-3 shadow">
                         <div
-                            class="d-flex justify-content-evenly align-items-center align-content-center fw-bold"
+                            class="d-flex justify-content-evenly align-items-center fw-bold border-bottom border-2 border-dark pb-2 px-0"
                         >
                             <p class="">{{ user.id }}</p>
                             <div class="">
@@ -71,7 +73,7 @@
                             </p>
                         </div>
                         <div class="py-3 px-1">
-                            <h5>details:</h5>
+                            <h5 class="text-center fst-italic">Details</h5>
                             <p>
                                 <b>Email:</b> <br />
                                 {{ user.email }}
@@ -88,7 +90,7 @@
                     } @else if (user.car_vin === null){
                     <div class="card h-100 rounded-3 bg-primary-subtle p-3 shadow">
                         <div
-                            class="d-flex justify-content-evenly align-items-center align-content-center fw-bold"
+                            class="d-flex justify-content-evenly align-items-center fw-bold border-bottom border-2 border-dark pb-2 px-0"
                         >
                             <p class="">{{ user.id }}</p>
                             <div class="">
@@ -99,7 +101,7 @@
                             </p>
                         </div>
                         <div class="py-3 px-1">
-                            <h5>details:</h5>
+                            <h5 class="text-center fst-italic">Details</h5>
                             <p>
                                 <b>Email:</b> <br />
                                 {{ user.email }}
@@ -116,7 +118,7 @@
                     } @else {
                     <div class="card h-100 rounded-3 bg-success-subtle p-3 shadow">
                         <div
-                            class="d-flex justify-content-evenly align-items-center align-content-center fw-bold"
+                            class="d-flex justify-content-evenly align-items-center fw-bold border-bottom border-2 border-dark pb-2 px-0"
                         >
                             <p class="">{{ user.id }}</p>
                             <div class="">
@@ -127,7 +129,7 @@
                             </p>
                         </div>
                         <div class="py-3 px-1">
-                            <h5>details:</h5>
+                            <h5 class="text-center fst-italic">Details</h5>
                             <p>
                                 <b>Email:</b> <br />
                                 {{ user.email }}
@@ -142,6 +144,10 @@
                         </div>
                     </div>
                     }
+                </div>
+                } @empty {
+                <div class="alert alert-danger p-5 text-center">
+                    <h2>No Data Found</h2>
                 </div>
                 }
             </div>

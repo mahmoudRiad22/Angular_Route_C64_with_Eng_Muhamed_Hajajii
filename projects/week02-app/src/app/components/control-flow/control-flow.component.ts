@@ -654,6 +654,8 @@ export class ControlFlowComponent {
             job_title: 'Quality Control Specialist',
         },
     ];
+    // UsersData: IUser[] =[]
+    // persons:Iperson[] = []
 }
 
 interface Iperson {
