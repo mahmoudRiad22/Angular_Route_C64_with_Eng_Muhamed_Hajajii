@@ -6,9 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "i:all": "npm i bootstrap && npm i @fortawesome/fontawesome-free"
   },
   "prettier": {
+    "tabWidth": 4,
+    "useTabs": false,
     "printWidth": 100,
     "singleQuote": true,
     "overrides": [
