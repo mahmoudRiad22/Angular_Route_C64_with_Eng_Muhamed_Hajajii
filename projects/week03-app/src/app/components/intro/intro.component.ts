@@ -21,7 +21,9 @@ export class IntroComponent {
     this.textAreaInput = (event.target as HTMLInputElement).value
     // console.log('this.textAreaInput :>> ', this.textAreaInput);
   }
-
+  clearTextArea():void{
+    this.textAreaInput = ''
+  }
   toggleShow():void{
     this.isShow = !this.isShow
   }
