@@ -6,13 +6,13 @@
         -- view the given feedback on the website again ✅
         -- replace the view feedback into a char indicator ✅
         -- change the character indicator to a progress bar ✅-->
-<!--  todo 03: redo the feedback applying using the 2 way data binding aka "banana in the box" ❓-->
-<!--  todo 04: save email and password from the user and using two-way data binding view it in the console ❓-->
+<!--  todo 03: redo the feedback applying using the 2 way data binding aka "banana in the box" ✅-->
+<!--  todo 04: save email and password from the user and using two-way data binding view it in the console ✅-->
 <!--  todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"-->
 <!--  todo 05.1: explain the following: [flex-grow-0 vs flex-grow-1] ❓-->
 <!--  todo 05.2: when do we use the "redirectTo" [emptyPaths, not-foundPaths, updatedPaths, callbacks-forAnalysis] ❓-->
 
-<section #Intro class="pb-5">
+<section #todo01_todo02 class="pb-5">
     <div class="container">
         <div class="p-3 text-center">
             <h1>Recap and basic routing</h1>
@@ -55,10 +55,58 @@
                     <button class="btn btn-danger mt-0 mx-1" (click)="toggleShow()">
                         Show/Hide Feedback
                     </button>
-                    <div class="d-none" [class.d-none.d-flex]="textAreaInput.length >= 150 ? false : true">
+                    <div
+                        class="d-none"
+                        [class.d-none.d-flex]="textAreaInput.length >= 150 ? false : true"
+                    >
                         <button class="btn btn-success mt-0 mx-1">Submit</button>
                         <span class="fw-bold">thank you 🌹🌹</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section #todo03>
+    <div class="container pb-5">
+        <div class="p-3 rounded bg-warning">
+            <h2 class="">2- read input using two-way data binding:</h2>
+
+            <div class="p-4">
+                <div class="w-50 mx-auto mb-2">
+                    <label for="userName" class="ps-2 fw-bold">Name</label>
+                    <input
+                        [(ngModel)]="userData.name"
+                        class="form-control"
+                        type="text"
+                        name=""
+                        id="userName"
+                    />
+                </div>
+                <div class="w-50 mx-auto mb-2">
+                    <label for="userEmail" class="ps-2 fw-bold">Email</label>
+                    <input
+                        [(ngModel)]="userData.email"
+                        class="form-control"
+                        type="email"
+                        name=""
+                        id="userEmail"
+                    />
+                </div>
+                <div class="w-50 mx-auto mb-2">
+                    <label for="userPassword" class="ps-2 fw-bold">Password</label>
+                    <input
+                        [(ngModel)]="userData.password"
+                        class="form-control"
+                        type="password"
+                        name=""
+                        id="userPassword"
+                    />
+                </div>
+
+                <div class="pt-4 w-50 mx-auto">
+                    <button class="btn btn-primary" (click)="showUserData()">Send</button>
                 </div>
             </div>
         </div>
