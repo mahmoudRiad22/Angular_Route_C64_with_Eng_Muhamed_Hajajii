@@ -14,9 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/week01-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/week01-app/tsconfig.app.json",
             "assets": [
               {
@@ -25,12 +23,13 @@
               }
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/week01-app/src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -74,10 +73,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/week01-app/tsconfig.spec.json",
             "assets": [
               {
@@ -85,9 +81,7 @@
                 "input": "projects/week01-app/public"
               }
             ],
-            "styles": [
-              "projects/week01-app/src/styles.css"
-            ]
+            "styles": ["projects/week01-app/src/styles.css"]
           }
         }
       }
@@ -108,9 +102,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/week03-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/week03-app/tsconfig.app.json",
             "assets": [
               {
@@ -166,10 +158,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/week03-app/tsconfig.spec.json",
             "assets": [
               {
@@ -177,9 +166,7 @@
                 "input": "projects/week03-app/public"
               }
             ],
-            "styles": [
-              "projects/week03-app/src/styles.css"
-            ]
+            "styles": ["projects/week03-app/src/styles.css"]
           }
         }
       }
