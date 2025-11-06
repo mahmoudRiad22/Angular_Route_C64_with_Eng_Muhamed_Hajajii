@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, NgModel } from '@angular/forms';
-import { IntroComponent } from "./components/intro/intro.component";
+import { IntroComponent } from './components/intro/intro.component';
 
 @Component({
     selector: 'app-root',
-    imports: [FormsModule, IntroComponent, NavbarComponent, FooterComponent],
+    imports: [FormsModule, NavbarComponent, FooterComponent, RouterOutlet],
     templateUrl: './app.html',
     styleUrl: './app.css',
 })
@@ -18,5 +18,5 @@ export class App {
 
     showText() {
         console.log('textAreaInput :>> ', this.textAreaInput);
-  }
+    }
 }

@@ -114,6 +114,27 @@
     </div>
 </section>
 
-<!--  todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"-->
-<!--  todo 05.1: explain the following: [flex-grow-0 vs flex-grow-1] ❓-->
-<!--  todo 05.2: when do we use the "redirectTo" [emptyPaths, not-foundPaths, updatedPaths, callbacks-forAnalysis] ❓-->
+<!--  todo 05.1: explain the following: [flex-grow-0 vs flex-grow-1] ✅
+        -- flex-grow-*: its a flex child property that makes the child takes up all the free spaces left it exists.
+                -- flex-grow-0: default "fit the content only"
+                -- flex-grow-1: fill all the empty space. -->
+
+<!--  todo 05.2: when do we use the "redirectTo" [emptyPaths, not-foundPaths, updatedPaths, callbacks-forAnalysis] ❓
+    -- redirect: it redirect the pathValue and replace it with the redirectValue then execute the new url
+        -- Ex: url = https://localhost:4200/lecture/session/123
+        {
+        path :'lecture',
+        redirectTo: 'course',
+        pathMatch: 'prefix'
+        }
+        -- if url contains 'lecture' then replace 'lecture' with 'course' and redirect it.
+        -- new-url =  https://localhost:4200/course/session/123
+
+        --Ex: url = https://localhost:4200/lecture/session/123
+        {
+            path:"lecture",
+            redirectTo: 'course',
+            pathMatch: 'full'
+        }
+            -- if url contain exactly 'lecture' and nothing more then replace with "course" and redirect it.
+            -- new-url = https://localhost:4200/lecture/session/123     :>>not exact match -->
