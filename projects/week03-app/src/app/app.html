@@ -1,3 +1,138 @@
-<app-navbar></app-navbar>
+<!-- >> Intro content -->
+<!-- * recap and basic routing -->
+<!-- todo 01: create the given task in public images folder -->
+<!-- todo 02: apply the student feedback applying in the session 
+        -- take the feedback from user into the ts file
+        -- view the given feedback on the website again 
+        -- replace the view feedback into a char indicator
+        -- change the character indicator to a progress bar-->
+<!-- todo 03: redo the feedback applying using the 2 way data binding aka "banana in the box" -->
+<!-- todo 04: save email and password from the user and using two-way data binding view it in the console -->
+<!-- todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths"-->
+<!-- todo 05.1: explain the following: [flex-grow-0 vs flex-grow-1] -->
+ <!-- todo 05.2: when do we use the "redirectTo" [emptyPaths, not-foundPaths, updatedPaths, callbacks-forAnalysis] -->
+<!-- >> level 01 content -->
+<!-- * SPA vs Trad websites and level 01 nested routing -->
+<!-- todo 06: what is the difference between loading an html file and loading a js file in browsers? -->
+<!-- todo 07: level 01
+        /
+        ├── /home
+        ├── /posts
+        │   ├── /featured
+        │   ├── /recent
+        │   └── /popular
+        ├── /about
+        └── /contact
+-->
 
-<app-footer></app-footer>
+<!-- >> level 02 content -->
+<!-- * level 02 of nested routing -->
+<!-- todo 08: level 02
+            /admin
+            ├── /dashboard
+            ├── /products
+            │   ├── /list
+            │   ├── /add
+            │   └── /categories
+            └── /orders
+                ├── /pending
+                ├── /completed
+                └── /returns
+-->
+
+<!-- >> level 03 content -->
+<!-- * level 03 nested routing -->
+<!-- todo 09: level 03
+            /university
+            ├── /engineering
+            │   ├── /computer-science
+            │   │   ├── /year-1
+            │   │   ├── /year-2
+            │   │   └── /year-3
+            │   └── /mechanical
+            │       ├── /year-1
+            │       └── /year-2
+            ├── /business
+            │   ├── /finance
+            │   │   ├── /undergrad
+            │   │   └── /masters
+            │   └── /marketing
+            └── /faculty
+                ├── /profiles
+                └── /schedules
+-->
+
+<!-- >> level 04 content -->
+<!-- * level 04 nested routing -->
+<!-- todo 10: level 04
+                /company
+                ├── /projects
+                │   ├── /project-alpha
+                │   │   ├── /overview
+                │   │   ├── /team
+                │   │   │   ├── /developers
+                │   │   │   ├── /designers
+                │   │   │   └── /managers
+                │   │   ├── /documents
+                │   │   │   ├── /specifications
+                │   │   │   ├── /meeting-notes
+                │   │   │   └── /reports
+                │   │   └── /timeline
+                │   │       ├── /q1-2024
+                │   │       ├── /q2-2024
+                │   │       └── /q3-2024
+                │   └── /project-beta
+                ├── /hr
+                │   ├── /employees
+                │   └── /departments
+                └── /finance
+-->
+
+<!-- >> level 05 content -->
+<!-- * level 05 nested routing -->
+<!-- todo 11: level 05
+                /government
+                ├── /federal
+                │   ├── /irs
+                │   │   ├── /individuals
+                │   │   │   ├── /filing
+                │   │   │   │   ├── /w2
+                │   │   │   │   ├── /1099
+                │   │   │   │   └── /deductions
+                │   │   │   └── /payment
+                │   │   └── /businesses
+                │   │       ├── /corporations
+                │   │       └── /partnerships
+                │   └── /treasury
+                └── /state
+                    ├── /california
+                    └── /new-york
+-->
+
+
+
+
+
+<div class="d-flex justify-content-between flex-column vh-100">
+    <div class="">
+        <div class="bg-warning">
+            <div class="p-4 w-50 mx-auto">
+                <textarea
+                    [(ngModel)]="textAreaInput"
+                    placeholder="say something"
+                    rows="5"
+                    class="form-control"
+                ></textarea>
+            </div>
+            <button class="btn btn-primary" (click)="showText()">show</button>
+        </div>
+    </div>
+    
+    <div class="bg-danger d-flex flex-grow-1">
+        <app-navbar></app-navbar>
+    </div>
+    
+    <div class="text-bg-dark">
+        <app-footer></app-footer>
+    </div>
+</div>
