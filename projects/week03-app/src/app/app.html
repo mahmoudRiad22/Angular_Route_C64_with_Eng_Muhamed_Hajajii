@@ -1,3 +1,7 @@
+<!-- ****************************** -->
+<!-- ****************************** -->
+<!-- #region todo lists -->
+
 <!-- >> level 01 content -->
 <!-- * SPA vs Trad websites and level 01 nested routing -->
 <!-- todo 06: what is the difference between loading an html file and loading a js file in browsers? -->
@@ -96,26 +100,15 @@
                     └── /new-york
 -->
 
+
+<!-- #endregion todo lists -->
+<!-- ****************************** -->
+<!-- ****************************** -->
+
 <div class="d-flex justify-content-between flex-column vh-100">
-    <div class="">
-        <div class="bg-warning">
-            <div class="p-4 w-50 mx-auto">
-                <textarea
-                    [(ngModel)]="textAreaInput"
-                    placeholder="say something"
-                    rows="5"
-                    class="form-control"
-                ></textarea>
-            </div>
-            <button class="btn btn-primary" (click)="showText()">show</button>
-        </div>
+    <app-navbar/>
+    <div class="flex-grow-1">
+        <app-intro/>
     </div>
-
-    <div class="bg-danger d-flex flex-grow-1">
-        <app-navbar></app-navbar>
-    </div>
-
-    <div class="text-bg-dark">
-        <app-footer></app-footer>
-    </div>
+    <app-footer/>
 </div>

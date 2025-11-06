@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class IntroComponent {
 
+
+  textAreaInput !:string
+  isShow:boolean = true
+  readInput(event:Event):void{
+    this.textAreaInput = (event.target as HTMLInputElement).value
+    // console.log('this.textAreaInput :>> ', this.textAreaInput);
+  }
+
+  toggleShow():void{
+    this.isShow = !this.isShow
+  }
 }

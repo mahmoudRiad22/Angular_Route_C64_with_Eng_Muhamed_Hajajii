@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, NgModel } from '@angular/forms';
+import { IntroComponent } from "./components/intro/intro.component";
 
 @Component({
     selector: 'app-root',
-    imports: [NavbarComponent, FooterComponent, FormsModule],
+    imports: [FormsModule, IntroComponent, NavbarComponent, FooterComponent],
     templateUrl: './app.html',
     styleUrl: './app.css',
 })
