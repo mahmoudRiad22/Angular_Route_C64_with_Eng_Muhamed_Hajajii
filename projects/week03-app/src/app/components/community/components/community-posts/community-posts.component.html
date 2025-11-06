@@ -1,0 +1,28 @@
+<section>
+    <div class="container bg-warning">
+        <div class="pt-3 text-center">
+            <h2>Community Posts page 🎂🎂🎂🎂🎂</h2>
+        </div>
+
+        <div class="pb-5 rounded-4 overflow-hidden">
+            <div class="">
+                <ul class="nav nav-underline bg-dark-subtle px-5">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="./">featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="./recent">recent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="./popular">popular</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-success d-flex min-vh-100 rounded-4">
+                <div class="w-100">
+                    <router-outlet />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
