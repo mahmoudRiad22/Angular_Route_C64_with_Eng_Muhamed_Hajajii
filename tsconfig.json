@@ -23,20 +23,7 @@
         "strictTemplates": true
     },
     "files": [],
-    "references": [
-        {
-            "path": "./projects/week01-app/tsconfig.app.json"
-        },
-        {
-            "path": "./projects/week01-app/tsconfig.spec.json"
-        },
-        {
-            "path": "./projects/week03-app/tsconfig.app.json"
-        },
-        {
-            "path": "./projects/week03-app/tsconfig.spec.json"
-        }
-    ],
+    "references": [],
     "prettier": {
         "tabWidth": 4,
         "useTabs": false,
