@@ -5,7 +5,12 @@
   "projects": {
     "week03-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
+        }
+      },
       "root": "projects/week03-app",
       "sourceRoot": "projects/week03-app/src",
       "prefix": "app",
@@ -25,7 +30,13 @@
               }
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/week03-app/src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
