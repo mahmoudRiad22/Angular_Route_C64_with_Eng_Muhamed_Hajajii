@@ -23,7 +23,14 @@
         "strictTemplates": true
     },
     "files": [],
-    "references": [],
+    "references": [
+      {
+        "path": "./projects/week03-app/tsconfig.app.json"
+      },
+      {
+        "path": "./projects/week03-app/tsconfig.spec.json"
+      }
+    ],
     "prettier": {
         "tabWidth": 4,
         "useTabs": false,
