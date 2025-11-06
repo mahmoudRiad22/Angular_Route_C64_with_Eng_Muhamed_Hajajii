@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
-
+import { RouterLinkActive, RouterLinkWithHref, RouterOutlet } from '@angular/router';
+declare var bootstrap: any;
 @Component({
-  selector: 'app-community',
-  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
-  templateUrl: './community.component.html',
-  styleUrl: './community.component.css',
+    selector: 'app-community',
+    imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
+    templateUrl: './community.component.html',
+    styleUrl: './community.component.css',
 })
-export class CommunityComponent {
-
-}
+export class CommunityComponent {}

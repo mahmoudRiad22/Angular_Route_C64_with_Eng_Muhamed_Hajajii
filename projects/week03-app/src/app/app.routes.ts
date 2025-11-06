@@ -28,47 +28,45 @@ export const routes: Routes = [
         path: 'community',
         component: CommunityComponent,
         title: 'Community',
-
-        children:[
+        children: [
             {
-                path:"",
-                component:CommunityHomeComponent,
-                title:"Community- Home"
+                path: '',
+                component: CommunityHomeComponent,
+                title: 'Community- Home',
             },
-            
             {
-                path:"posts",
-                component:CommunityPostsComponent,
-                title:"Community - Posts",
-                children:[
+                path: 'posts',
+                component: CommunityPostsComponent,
+                title: 'Community - Posts',
+                children: [
                     {
-                        path:"",
-                        component:PostsFeaturedComponent,
-                        title:"Community - Featured Posts"
+                        path: '',
+                        component: PostsFeaturedComponent,
+                        title: 'Community - Featured Posts',
                     },
                     {
-                        path:"recent",
-                        component:PostsRecentComponent,
-                        title:"Community - Recent Posts"
+                        path: 'recent',
+                        component: PostsRecentComponent,
+                        title: 'Community - Recent Posts',
                     },
                     {
-                        path:"popular",
-                        component:PostsPopularComponent,
-                        title:"Community - Popular Posts"
-                    }
-                ]
+                        path: 'popular',
+                        component: PostsPopularComponent,
+                        title: 'Community - Popular Posts',
+                    },
+                ],
             },
             {
-                path:"about",
-                component:CommunityAboutComponent,
-                title:"Community - about"
+                path: 'about',
+                component: CommunityAboutComponent,
+                title: 'Community - about',
             },
             {
-                path:"contact",
-                component:CommunityContactComponent,
-                title:"Community - contact"
-            }
-        ]
+                path: 'contact',
+                component: CommunityContactComponent,
+                title: 'Community - contact',
+            },
+        ],
     },
     {
         path: 'not-found',
@@ -78,5 +76,5 @@ export const routes: Routes = [
     {
         path: '**',
         redirectTo: 'not-found',
-    }
+    },
 ];
