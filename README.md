@@ -1,18 +1,51 @@
 # AngularRouteC64WithEngMuhamedHajajii
 
-```bash
-1- npm i                // install packages
-2- npm run i:bs         // install bootstrap
-3- npm run i:faw        // install fontawesome
-4- ng g app "app-name"  // generate new app
-5- cd project-folder    // !IMPORTANT move inside the project folder
-    EX: cd projects/app01
-6- npm run i:tw3        // install tailwindcss 3.4.17
-7- link your input and output files properly using this command
-npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
+````bash
+1- install packages:
+    npm i          
 
-```
+2- install bootstrap:
+     npm run i:bs     
+
+3- install fontawesome:
+    npm run i:faw     
+
+4- generate new app:
+    ng g app "app-name" 
+
+5- !IMPORTANT move inside the project folder;
+    cd project-folder    
+    EX: cd projects/app01
+
+6- install tailwindcss 3.4.17:
+    npm run i:tw3        
+
+7- add this to tailwind.config.js
+```js
+            /** @type {import('tailwindcss').Config} */
+            export default {
+            content: ["./projects/app01/src/**/*.{html,js}"], /*use windsurf to autocomplete it*/
+            theme: {
+                extend: {},
+            },
+            plugins: [],
+            }
+
+8- add this to your styles.css
+    @tailwind base
+    @tailwind component
+    @tailwind utilities
+
+9- link your input and output files properly using this command
+    npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
+
+10- add this to your app component:
+    encapsulation: ViewEncapsulation.None
+
+````
+
 ## Workspace default md:
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.<details>
 
 ### Development server
@@ -70,6 +103,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ### Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
 </details>
 
 ---
@@ -86,6 +120,7 @@ For more information on using the Angular CLI, including detailed command refere
 ```
 
 **During development:**
+
 ```bash
 # 1. Make changes to your app
 git add .
@@ -98,6 +133,7 @@ git push origin week01_app
 ```
 
 **When the app is COMPLETE and ready for integration:**
+
 ```bash
 # 3. Merge to main ONLY when finished
 git checkout main
@@ -115,6 +151,7 @@ main branch:         ———————————————————�
 ## Complete Multi-App Workflow Example:
 
 ### Week 1 Development:
+
 ```bash
 # Start Week 1
 git checkout -b week01_app
@@ -133,6 +170,7 @@ git push origin main
 ```
 
 ### Week 2 Development:
+
 ```bash
 # Start fresh from updated main
 git checkout main
@@ -148,13 +186,13 @@ git push origin week02_app
 
 ## When SHOULD You Merge?
 
-| Scenario | Should You Merge? |
-|----------|-------------------|
-| After each small commit | ❌ NO |
-| After each push to your feature branch | ❌ NO |
-| When the app is **feature complete** and tested | ✅ YES |
-| When you're ready to integrate with main project | ✅ YES |
-| At the end of the week (when the weekly app is done) | ✅ YES |
+| Scenario                                             | Should You Merge? |
+| ---------------------------------------------------- | ----------------- |
+| After each small commit                              | ❌ NO             |
+| After each push to your feature branch               | ❌ NO             |
+| When the app is **feature complete** and tested      | ✅ YES            |
+| When you're ready to integrate with main project     | ✅ YES            |
+| At the end of the week (when the weekly app is done) | ✅ YES            |
 
 ## Best Practices:
 
@@ -164,9 +202,11 @@ git push origin week02_app
 4. **Test Before Merging** to ensure you're not breaking the main project
 
 ## Your Current Situation:
+
 Since you're on `week01_app` and have committed:
-- Continue developing and pushing to `week01_app`
-- Only merge to `main` when Week 1 app is **completely finished**
-- Then create `week02_app` branch and repeat the process
+
+-   Continue developing and pushing to `week01_app`
+-   Only merge to `main` when Week 1 app is **completely finished**
+-   Then create `week02_app` branch and repeat the process
 
 </details>
