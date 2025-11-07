@@ -1,6 +1,15 @@
 # AngularRouteC64WithEngMuhamedHajajii
 
-# Workspace default md:
+```bash
+1- npm i            // install packages
+2- npm run i:bs     // install bootstrap
+3- npm run i:faw    // install fontawesome
+4- npm run i:tw3    // install tailwindcss 3.4.17
+5- ng g app "name"  // generate new app
+6- link your css and js files.
+
+```
+## Workspace default md:
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.<details>
 
 ### Development server
