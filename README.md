@@ -1,12 +1,15 @@
 # AngularRouteC64WithEngMuhamedHajajii
 
 ```bash
-1- npm i            // install packages
-2- npm run i:bs     // install bootstrap
-3- npm run i:faw    // install fontawesome
-4- npm run i:tw3    // install tailwindcss 3.4.17
-5- ng g app "name"  // generate new app
-6- link your css and js files.
+1- npm i                // install packages
+2- npm run i:bs         // install bootstrap
+3- npm run i:faw        // install fontawesome
+4- ng g app "app-name"  // generate new app
+5- cd project-folder    // !IMPORTANT move inside the project folder
+    EX: cd projects/app01
+6- npm run i:tw3        // install tailwindcss 3.4.17
+7- link your input and output files properly using this command
+npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
 
 ```
 ## Workspace default md:
