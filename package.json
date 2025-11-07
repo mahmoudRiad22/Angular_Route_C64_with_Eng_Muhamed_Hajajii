@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i:bs": "npm i bootstrap",
-    "i:faw": "npm i @fortawesome/fontawesome-free"
+    "i:faw": "npm i @fortawesome/fontawesome-free",
+    "i:tw3":"npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
+
   },
   "prettier": {
     "tabWidth": 4,
