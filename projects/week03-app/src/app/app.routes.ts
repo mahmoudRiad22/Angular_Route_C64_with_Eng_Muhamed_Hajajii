@@ -56,14 +56,20 @@ export const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        component: PostsFeaturedComponent,
-                        title: 'Community - Featured Posts',
+                        redirectTo: 'recent',
+                        pathMatch: 'full',
                     },
                     {
                         path: 'recent',
                         component: PostsRecentComponent,
                         title: 'Community - Recent Posts',
                     },
+                    {
+                        path: 'featured',
+                        component: PostsFeaturedComponent,
+                        title: 'Community - Featured Posts',
+                    },
+
                     {
                         path: 'popular',
                         component: PostsPopularComponent,
@@ -89,23 +95,23 @@ export const routes: Routes = [
         title: 'Admin - Dashboard',
         children: [
             {
-                path:"",
-                redirectTo:"dashboard",
-                pathMatch:"full"
+                path: '',
+                redirectTo: 'dashboard',
+                pathMatch: 'full',
             },
             {
-                path:"dashboard",
-                component:DashboardComponent,
-                title:"Admin - Dashboard"
+                path: 'dashboard',
+                component: DashboardComponent,
+                title: 'Admin - Dashboard',
             },
             {
                 path: 'products',
                 component: ProductsComponent,
-                title:"Admin - Products",
+                title: 'Admin - Products',
                 children: [
                     {
                         path: '',
-                        redirectTo: 'list',
+                        redirectTo: 'add',
                         pathMatch: 'full',
                     },
                     {
@@ -123,12 +129,12 @@ export const routes: Routes = [
                         component: CategoriesComponent,
                         title: 'Admin - productsCategories',
                     },
-                ]
+                ],
             },
             {
-                path:'orders',
-                component:OrdersComponent,
-                title:"Admin - Orders",
+                path: 'orders',
+                component: OrdersComponent,
+                title: 'Admin - Orders',
                 children: [
                     {
                         path: '',
@@ -150,8 +156,8 @@ export const routes: Routes = [
                         component: ReturnsComponent,
                         title: 'Admin - returnsOrders',
                     },
-                ]
-            }
+                ],
+            },
         ],
     },
     {
