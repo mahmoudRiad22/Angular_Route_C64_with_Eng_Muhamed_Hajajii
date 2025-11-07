@@ -1,1 +1,37 @@
-<p>orders works!</p>
+<section class="py-4 min-vh-100 rounded-3 rounded-start-0" [style.backgroundColor]="'#9B919A'">
+    <div class="container">
+        <h1 class="text-center text-capitalize">Orders page</h1>
+
+        <div class="m-0 p-0 rounded-3 overflow-hidden">
+            <ul class="list-unstyled d-flex justify-content-evenly bg-dark text-light m-0">
+                <li>
+                    <a
+                        class="nav-link my-1 p-2 rounded-3 fa-underline"
+                        routerLinkActive="bg-success text-black"
+                        routerLink="./pending"
+                        >pending</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="nav-link my-1 p-2 rounded-3 fa-underline"
+                        routerLinkActive="bg-success text-black"
+                        routerLink="./completed"
+                        >completed</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="nav-link my-1 p-2 rounded-3 fa-underline"
+                        routerLinkActive="bg-success text-black"
+                        routerLink="./returns"
+                        >returns</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <div class="min-vh-100 border border-black border-3 mt-1 rounded-3">
+            <router-outlet/>
+        </div>
+    </div>
+</section>

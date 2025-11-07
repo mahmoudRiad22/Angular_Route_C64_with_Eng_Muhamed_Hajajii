@@ -9,6 +9,16 @@ import { CommunityContactComponent } from './components/community/components/com
 import { PostsFeaturedComponent } from './components/community/components/community-posts/components/posts-featured/posts-featured.component';
 import { PostsRecentComponent } from './components/community/components/community-posts/components/posts-recent/posts-recent.component';
 import { PostsPopularComponent } from './components/community/components/community-posts/components/posts-popular/posts-popular.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ProductsComponent } from './components/admin/components/products/products.component';
+import { DashboardComponent } from './components/admin/components/dashboard/dashboard.component';
+import { OrdersComponent } from './components/admin/components/orders/orders.component';
+import { ListComponent } from './components/admin/components/products/components/list/list.component';
+import { AddComponent } from './components/admin/components/products/components/add/add.component';
+import { CategoriesComponent } from './components/admin/components/products/components/categories/categories.component';
+import { PendingComponent } from './components/admin/components/orders/components/pending/pending.component';
+import { CompletedComponent } from './components/admin/components/orders/components/completed/completed.component';
+import { ReturnsComponent } from './components/admin/components/orders/components/returns/returns.component';
 
 export const routes: Routes = [
     // todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"
@@ -31,6 +41,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
+                redirectTo: 'home',
+                pathMatch: 'full',
+            },
+            {
+                path: 'home',
                 component: CommunityHomeComponent,
                 title: 'Community- Home',
             },
@@ -66,6 +81,77 @@ export const routes: Routes = [
                 component: CommunityContactComponent,
                 title: 'Community - contact',
             },
+        ],
+    },
+    {
+        path: 'admin',
+        component: AdminComponent,
+        title: 'Admin - Dashboard',
+        children: [
+            {
+                path:"",
+                redirectTo:"dashboard",
+                pathMatch:"full"
+            },
+            {
+                path:"dashboard",
+                component:DashboardComponent,
+                title:"Admin - Dashboard"
+            },
+            {
+                path: 'products',
+                component: ProductsComponent,
+                title:"Admin - Products",
+                children: [
+                    {
+                        path: '',
+                        redirectTo: 'list',
+                        pathMatch: 'full',
+                    },
+                    {
+                        path: 'list',
+                        component: ListComponent,
+                        title: 'Admin - listProducts',
+                    },
+                    {
+                        path: 'add',
+                        component: AddComponent,
+                        title: 'Admin - addProducts',
+                    },
+                    {
+                        path: 'categories',
+                        component: CategoriesComponent,
+                        title: 'Admin - productsCategories',
+                    },
+                ]
+            },
+            {
+                path:'orders',
+                component:OrdersComponent,
+                title:"Admin - Orders",
+                children: [
+                    {
+                        path: '',
+                        redirectTo: 'pending',
+                        pathMatch: 'full',
+                    },
+                    {
+                        path: 'pending',
+                        component: PendingComponent,
+                        title: 'Admin - pendingOrders',
+                    },
+                    {
+                        path: 'completed',
+                        component: CompletedComponent,
+                        title: 'Admin - completedOrders',
+                    },
+                    {
+                        path: 'returns',
+                        component: ReturnsComponent,
+                        title: 'Admin - returnsOrders',
+                    },
+                ]
+            }
         ],
     },
     {

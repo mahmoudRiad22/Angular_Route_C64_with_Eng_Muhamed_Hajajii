@@ -1,1 +1,38 @@
-<p>products works!</p>
+<section class="py-4 min-vh-100 rounded-3 rounded-start-0" [style.backgroundColor]="'#9E96A4'">
+    <div class="container">
+        <h1 class="text-center text-capitalize">Products page</h1>
+
+        <div class="">
+            <ul class="mb-0 shadow p-0 d-flex justify-content-evenly list-unstyled bg-dark rounded-3">
+                <li>
+                    <a
+                        class="nav-link px-3 py-2 rounded-2 text-light"
+                        routerLinkActive="bg-primary text-white"
+                        routerLink="./list"
+                        >list</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="nav-link px-3 py-2 rounded-2 text-light"
+                        routerLinkActive="bg-primary text-white"
+                        routerLink="./add"
+                        >add</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="nav-link px-3 py-2 rounded-2 text-light"
+                        routerLinkActive="bg-primary text-white"
+                        routerLink="./categories"
+                        >categories</a
+                    >
+                </li>
+            </ul>
+
+            <div class="vh-100 p-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>
