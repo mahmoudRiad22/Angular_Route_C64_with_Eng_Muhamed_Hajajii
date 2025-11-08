@@ -9,11 +9,10 @@
     "test": "ng test",
     "i:bs": "npm i bootstrap",
     "i:faw": "npm i @fortawesome/fontawesome-free",
-    "i:tw3":"npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
-
+    "i:tw3": "npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
   },
   "prettier": {
-    "tabWidth": 4,
+    "tabWidth": 2,
     "useTabs": false,
     "printWidth": 100,
     "singleQuote": true,
@@ -34,6 +33,8 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
