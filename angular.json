@@ -3,5 +3,99 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "week04-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
+        }
+      },
+      "root": "projects/week04-app",
+      "sourceRoot": "projects/week04-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/week04-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/week04-app/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week04-app/public"
+              }
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/week04-app/src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "week04-app:build:production"
+            },
+            "development": {
+              "buildTarget": "week04-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/week04-app/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week04-app/public"
+              }
+            ],
+            "styles": [
+              "projects/week04-app/src/styles.css"
+            ]
+          }
+        }
+      }
+    }
   }
 }
