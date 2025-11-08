@@ -20,3 +20,24 @@ export class App {
         console.log('textAreaInput :>> ', this.textAreaInput);
     }
 }
+
+// was working on understanding OOP in TypeScript
+abstract class name {
+    constructor(parameters: string) {
+        this.firstName = parameters;
+    }
+    lastName: string = 'Riad';
+    firstName: string;
+
+    abstract sayHello(): string;
+}
+
+class myName extends name {
+    sayHello(): string {
+        return 'hello';
+    }
+}
+
+const me = new myName('mahmoud');
+
+console.log(me.firstName, me.lastName,'says', me.sayHello());

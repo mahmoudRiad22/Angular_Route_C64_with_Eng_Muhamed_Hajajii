@@ -71,15 +71,38 @@
                     └── /new-york
 -->
 
+<!-- >> ScrollMemory -->
+<!-- *upon routing between pages, make sure you start at the top of the page -->
+<!-- todo 12: Apply scroll restoration 
+        -- explain the difference between the "top" Vs "enabled"-->
 
+<!-- >> hash location strategy: -->
+<!-- * using the # during routing -->
+<!-- todo 13:
+        -- what is the use of hash location?
+        -- if using hash location what does it stop?
+        -- what are other things i need to know about hash location strategy?-->
+
+<!-- >> with view transition: -->
+<!-- * taking snaps from the current router and the next router and transition smoothly between them -->
+<!-- todo 14: apply the view transition -->
+
+<!-- todo 15: summarize what params you learnt that're used in the provideRouter()? -->
+<!-- >> Query params: -->
+<!-- * using the query "?" to filter a page with specific info needed -->
+<!-- todo 15: explain the idea behind the using a query params -->
+
+<!-- >> transfer Data Intro: -->
+<!-- * -->
+<!-- todo 16: -->
 <!-- #endregion todo lists -->
 <!-- ****************************** -->
 <!-- ****************************** -->
 
 <div class="d-flex justify-content-between flex-column vh-100">
-    <app-navbar/>
+    <app-navbar />
     <div class="flex-grow-1">
-        <router-outlet/>
+        <router-outlet />
     </div>
-    <app-footer/>
+    <app-footer />
 </div>
