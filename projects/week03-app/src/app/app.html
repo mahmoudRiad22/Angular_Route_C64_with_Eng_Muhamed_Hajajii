@@ -93,16 +93,21 @@
 <!-- todo 15: explain the idea behind the using a query params -->
 
 <!-- >> transfer Data Intro: -->
-<!-- * -->
-<!-- todo 16: -->
+<!-- * combine the power of "Selectors" + "property Binding"-->
+<!-- todo 16: Create a reusable header for the TransferData Component 
+        -- create the design
+        -- make it reusable as a shared component
+        -- change the displayed name based on the active component
+        -- change the bgc image based on the active component-->
+
 <!-- #endregion todo lists -->
 <!-- ****************************** -->
 <!-- ****************************** -->
 
 <div class="d-flex justify-content-between flex-column vh-100">
-    <app-navbar />
-    <div class="flex-grow-1">
-        <router-outlet />
-    </div>
-    <app-footer />
+  <app-navbar />
+  <div class="flex-grow-1">
+    <router-outlet />
+  </div>
+  <app-footer />
 </div>

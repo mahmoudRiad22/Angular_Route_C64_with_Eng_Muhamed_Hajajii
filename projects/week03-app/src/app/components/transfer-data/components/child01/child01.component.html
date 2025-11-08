@@ -1,0 +1,22 @@
+<section class="">
+  <div class="container bg-warning">
+    <h1 class="">child 01</h1>
+    <div
+      class="UserInfor bg-warning-subtle rounded-3 shadow p-3 mb-4 d-none"
+      [class.d-none]="userInfo.name ? false : true"
+    >
+      <p>
+        <span class="d-block p-1"
+          ><b><i>User Name:</i></b> {{ userInfo.name }}</span
+        >
+        <span class="d-block p-1"
+          ><b><i>User Age:</i></b> {{ userInfo.age }}</span
+        >
+        <span class="d-block p-1"
+          ><b><i>User Email:</i></b> {{ userInfo.email }}</span
+        >
+      </p>
+    </div>
+    <p class="text-bg-danger fs-3 fw-bold">{{ msgData }}</p>
+  </div>
+</section>

@@ -19,154 +19,160 @@ import { CategoriesComponent } from './components/admin/components/products/comp
 import { PendingComponent } from './components/admin/components/orders/components/pending/pending.component';
 import { CompletedComponent } from './components/admin/components/orders/components/completed/completed.component';
 import { ReturnsComponent } from './components/admin/components/orders/components/returns/returns.component';
+import { TransferDataComponent } from './components/transfer-data/transfer-data.component';
 
 export const routes: Routes = [
-    // todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"
+  // todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"
 
-    {
+  {
+    path: '',
+    redirectTo: 'intro',
+    pathMatch: 'full',
+  },
+  {
+    path: 'intro',
+    component: IntroComponent,
+    title: 'week03 - Intro',
+  },
+
+  {
+    path: 'community',
+    component: CommunityComponent,
+    title: 'Community',
+    children: [
+      {
         path: '',
-        redirectTo: 'intro',
+        redirectTo: 'home',
         pathMatch: 'full',
-    },
-    {
-        path: 'intro',
-        component: IntroComponent,
-        title: 'week03 - Intro',
-    },
-
-    {
-        path: 'community',
-        component: CommunityComponent,
-        title: 'Community',
+      },
+      {
+        path: 'home',
+        component: CommunityHomeComponent,
+        title: 'Community- Home',
+      },
+      {
+        path: 'posts',
+        component: CommunityPostsComponent,
+        title: 'Community - Posts',
         children: [
-            {
-                path: '',
-                redirectTo: 'home',
-                pathMatch: 'full',
-            },
-            {
-                path: 'home',
-                component: CommunityHomeComponent,
-                title: 'Community- Home',
-            },
-            {
-                path: 'posts',
-                component: CommunityPostsComponent,
-                title: 'Community - Posts',
-                children: [
-                    {
-                        path: '',
-                        redirectTo: 'recent',
-                        pathMatch: 'full',
-                    },
-                    {
-                        path: 'recent',
-                        component: PostsRecentComponent,
-                        title: 'Community - Recent Posts',
-                    },
-                    {
-                        path: 'featured',
-                        component: PostsFeaturedComponent,
-                        title: 'Community - Featured Posts',
-                    },
+          {
+            path: '',
+            redirectTo: 'recent',
+            pathMatch: 'full',
+          },
+          {
+            path: 'recent',
+            component: PostsRecentComponent,
+            title: 'Community - Recent Posts',
+          },
+          {
+            path: 'featured',
+            component: PostsFeaturedComponent,
+            title: 'Community - Featured Posts',
+          },
 
-                    {
-                        path: 'popular',
-                        component: PostsPopularComponent,
-                        title: 'Community - Popular Posts',
-                    },
-                ],
-            },
-            {
-                path: 'about',
-                component: CommunityAboutComponent,
-                title: 'Community - about',
-            },
-            {
-                path: 'contact',
-                component: CommunityContactComponent,
-                title: 'Community - contact',
-            },
+          {
+            path: 'popular',
+            component: PostsPopularComponent,
+            title: 'Community - Popular Posts',
+          },
         ],
-    },
-    {
-        path: 'admin',
-        component: AdminComponent,
+      },
+      {
+        path: 'about',
+        component: CommunityAboutComponent,
+        title: 'Community - about',
+      },
+      {
+        path: 'contact',
+        component: CommunityContactComponent,
+        title: 'Community - contact',
+      },
+    ],
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    title: 'Admin - Dashboard',
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full',
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
         title: 'Admin - Dashboard',
+      },
+      {
+        path: 'products',
+        component: ProductsComponent,
+        title: 'Admin - Products',
         children: [
-            {
-                path: '',
-                redirectTo: 'dashboard',
-                pathMatch: 'full',
-            },
-            {
-                path: 'dashboard',
-                component: DashboardComponent,
-                title: 'Admin - Dashboard',
-            },
-            {
-                path: 'products',
-                component: ProductsComponent,
-                title: 'Admin - Products',
-                children: [
-                    {
-                        path: '',
-                        redirectTo: 'add',
-                        pathMatch: 'full',
-                    },
-                    {
-                        path: 'list',
-                        component: ListComponent,
-                        title: 'Admin - listProducts',
-                    },
-                    {
-                        path: 'add',
-                        component: AddComponent,
-                        title: 'Admin - addProducts',
-                    },
-                    {
-                        path: 'categories',
-                        component: CategoriesComponent,
-                        title: 'Admin - productsCategories',
-                    },
-                ],
-            },
-            {
-                path: 'orders',
-                component: OrdersComponent,
-                title: 'Admin - Orders',
-                children: [
-                    {
-                        path: '',
-                        redirectTo: 'pending',
-                        pathMatch: 'full',
-                    },
-                    {
-                        path: 'pending',
-                        component: PendingComponent,
-                        title: 'Admin - pendingOrders',
-                    },
-                    {
-                        path: 'completed',
-                        component: CompletedComponent,
-                        title: 'Admin - completedOrders',
-                    },
-                    {
-                        path: 'returns',
-                        component: ReturnsComponent,
-                        title: 'Admin - returnsOrders',
-                    },
-                ],
-            },
+          {
+            path: '',
+            redirectTo: 'add',
+            pathMatch: 'full',
+          },
+          {
+            path: 'list',
+            component: ListComponent,
+            title: 'Admin - listProducts',
+          },
+          {
+            path: 'add',
+            component: AddComponent,
+            title: 'Admin - addProducts',
+          },
+          {
+            path: 'categories',
+            component: CategoriesComponent,
+            title: 'Admin - productsCategories',
+          },
         ],
-    },
-    {
-        path: 'not-found',
-        component: NotFoundComponent,
-        title: 'Page Not Found',
-    },
-    {
-        path: '**',
-        redirectTo: 'not-found',
-    },
+      },
+      {
+        path: 'orders',
+        component: OrdersComponent,
+        title: 'Admin - Orders',
+        children: [
+          {
+            path: '',
+            redirectTo: 'pending',
+            pathMatch: 'full',
+          },
+          {
+            path: 'pending',
+            component: PendingComponent,
+            title: 'Admin - pendingOrders',
+          },
+          {
+            path: 'completed',
+            component: CompletedComponent,
+            title: 'Admin - completedOrders',
+          },
+          {
+            path: 'returns',
+            component: ReturnsComponent,
+            title: 'Admin - returnsOrders',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path:"transferData",
+    component:TransferDataComponent,
+    title: 'Transfer Data'
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
+    title: 'Page Not Found',
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+  },
 ];

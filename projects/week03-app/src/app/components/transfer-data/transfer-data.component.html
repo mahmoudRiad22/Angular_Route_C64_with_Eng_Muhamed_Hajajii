@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center pb-5">transfer-data works!</h1>
+  <div class="text-center">
+    <button class="btn btn-success m-1" (click)="sendDataToChildren()">Send</button>
+    <button class="btn btn-warning m-1" (click)="removeDataToChildren()">remove</button>
+  </div>
+  <div class="row gx-0">
+    <div class="col-6">
+      <app-child01 [msgData]="msg" [data2]="userInfo" />
+    </div>
+    <div class="col-6">
+      <app-child02 [msgData]="msg" [data2]="userInfo" />
+    </div>
+  </div>
+</div>
