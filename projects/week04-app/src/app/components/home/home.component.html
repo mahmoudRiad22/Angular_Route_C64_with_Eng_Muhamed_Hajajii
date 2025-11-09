@@ -1,6 +1,47 @@
-<section>
+<section #Home class="min-vh-100 bg01">
   <div class="container">
-    <p>home works!</p>
-    
+    <div class="text-center text-white pt-3">
+      <h1>sharing data between two child of same parent</h1>
+      <h2>Sibling transfer Data</h2>
+    </div>
+    <div class="container px-5">
+      <app-home-header [headerName]="userNameEntered" />
+    </div>
+    <app-home-body (userName)="userNameEntered = $event" />
   </div>
+  <app-home-footer />
 </section>
+
+<!-- >> Transfer Data between parent and children:
+
+? parent =====> selector [] =====> Child
+? child  =====> selector () =====> parent
+? child  =====> selector () =====> parent =====> selector []=====> Child
+
+
+    * 1- from Parent to child: 
+          --using the [@Input]
+          -- data flow:
+              parent     =====>      selector        =====>  child
+              [property]         [property binding]         [@Input]
+    * 2- from parent to child:
+          -- using the (@output + EventEmitter)
+          -- Data Flow:
+              child     =====>      selector        =====>  parent
+    [@output EventEmitter]       (Event binding)           [property]
+                                        +
+                                  property = $event
+
+    * 3- from child to another child: [Sibling]
+          -- using both @input (@Output + eventEmitter)
+          -- Data Flow:
+              child      =====>      selector     =====>  parent     =====>      selector        =====>  child
+    [@output EventEmitter]       (Event binding)        [property]         [property binding]          [@Input]
+                                        +
+                                  property = $event
+
+-->
+<!-- todo 01: create card applying for this
+  https://ecommerce.routemisr.com/api/v1/products?page=1
+
+-->
