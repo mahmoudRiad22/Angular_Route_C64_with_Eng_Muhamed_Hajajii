@@ -7,7 +7,9 @@
     <div class="container px-5">
       <app-home-header [headerName]="userNameEntered" />
     </div>
-    <app-home-body (userName)="userNameEntered = $event" />
+    <app-home-body (userName)="userNameEntered = $event">
+      <h1>hello</h1>
+    </app-home-body>
   </div>
   <app-home-footer />
 </section>
@@ -47,4 +49,217 @@
       -- transform it to reusable component.
       -- create an interface for the response data using json to typescript
 
+-->
+
+<!-- >> Content Projection:-->
+<!-- * transfer html content between components with relation -->
+<!-- todo 02: create a lightBox to view images:
+      -- create the UI for it
+      -- transform it into a reusable component inside the parent components
+      -- use the ng-content projection to adjust the images based on whats given-->
+
+<ng-template #id01 let-data="variableName"></ng-template>
+<ng-container [ngTemplateOutlet]=""></ng-container>
+<ng-container
+  [ngTemplateOutlet]="alert"
+  [ngTemplateOutletContext]="{ type: 'warning', message: 'THIS Very Good' }"
+></ng-container>
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+
+<section>
+  <div class="container" [class]="">
+    @if (true) {
+    <h3 class="p-5 text-center text-bg-primary">What is happening</h3>
+    }
+  </div>
+</section>
+
+<!---------------------------------------------------------->
+<!---------------------------------------------------------->
+<ng-template #alert let-type="type" let-message="message">
+  <div [class]="'alert alert-' + type">
+    {{ message }}
+  </div>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="alert; context: { type: 'success', message: 'Saved!' }"
+></ng-container>
+<ng-container
+  *ngTemplateOutlet="alert; context: { type: 'danger', message: 'Failed!' }"
+></ng-container>
+<!---------------------------------------------------------->
+<!------------------ Element Reference --------------------->
+<!---------------------------------------------------------->
+
+<section>
+  <div class="container text-black">
+    <h1 #ref01 class="p-3 bg-dark-subtle">This is ref01</h1>
+    <h1 #ref02 class="p-3 bg-danger-subtle">This is ref02</h1>
+    <h1 #ref03 class="p-3 bg-warning-subtle">This is ref03</h1>
+  </div>
+
+  <button (click)="showInConsole()" class="btn btn-primary">Show in Console</button>
+</section>
+
+<section>
+  <div class="container">
+    <div class="w-50 bg-light shadow-lg m-auto">
+      <app-home-body [user]="staticData"></app-home-body>
+    </div>
+  </div>
+</section>
+
+<!-- todo 03: 
+      -- create a parent component with multiple children components
+      -- create multiple elements in each child with same ElementRef
+      -- from the TS file: 
+          -- select all the element and change its bgc
+          -- make ui changes for first child and last child
+          -- change the style of all of them using a grouping ElementRef
+          -- change each element using a singular ElementRef for each element
+          -- toggle the change upon click -->
+
+<!-- todo 04: Apply all life cycle hooks:
+>> Task Ticket: Component Lifecycle Hook Demo
+
+>> 🎯 Objective
+Create a user profile dashboard that demonstrates all Angular 
+component lifecycle hooks in action.
+
+>> 📋 User Stories
+
+>> 1. Profile Display Component
+- Display user profile card with name, email, and status
+- Show lifecycle hook execution order in a log panel
+- Include input properties to trigger `ngOnChanges`
+
+>> 2. Interactive Controls
+- Toggle profile visibility (tests `ngOnInit`/`ngOnDestroy`)
+- Update user data (tests `ngOnChanges`)
+- Add/remove permissions (tests content projection hooks)
+- Simulate heavy computation (tests `ngDoCheck`)
+
+>> 3. Child Components
+- Create permission list component (tests view hooks)
+- Implement status indicator component
+- Add activity feed with dynamic items
+
+>> 🛠️ Technical Requirements
+
+>> Hook Demonstration Points:
+- `ngOnChanges` - React to user data updates
+- `ngOnInit` - Load initial user data
+- `ngDoCheck` - Monitor custom change detection
+- `ngAfterContentInit` - Setup projected content
+- `ngAfterContentChecked` - Track content changes
+- `ngAfterViewInit` - Initialize child components
+- `ngAfterViewChecked` - Monitor view updates
+- `ngOnDestroy` - Cleanup subscriptions
+
+>> UI Elements to Include:
+- User profile card with editable fields
+- Lifecycle event log display
+- Control panel with action buttons
+- Real-time hook activity indicator
+
+>> 🎮 Test Scenarios
+
+>> Scenario 1: Component Creation
+1. Navigate to profile page
+2. Observe hook execution order in log
+3. Verify all initialization hooks fire
+
+>> Scenario 2: Data Updates
+1. Edit user name/email
+2. Check `ngOnChanges` triggers
+3. Verify UI updates correctly
+
+>> Scenario 3: Component Destruction
+1. Toggle profile visibility off/on
+2. Confirm `ngOnDestroy` cleans up resources
+3. Verify re-initialization works
+
+>> 📊 Success Metrics
+- All 8 lifecycle hooks properly implemented
+- Hook execution order matches Angular spec
+- No memory leaks on component destruction
+- Interactive controls trigger appropriate hooks
+
+>> 🏷️ Labels
+`lifecycle-hooks`, `components`, `angular-core`, `demo`
+
+Time Estimate: 2-3 hours
+
+Ready to implement? This ticket will give you hands-on 
+experience with every Angular lifecycle hook! 🚀
+  -->
+
+<!-- * week 04 outline:
+
+>> session01:
+1. Transfer Data from parent to child
+
+2. Transfer Data from child to parent
+
+3. Transfer Data from child to child.
+
+4. Content projection from `selector scope` to `ng-content` 
+
+5. template fragments using the `ng-template` and  (`ng-container` + `[ngTemplateOutlet]` )
+    templates can have variables using the keyword `let-Internal_name = "External_name"`
+    then use the `[ngTemplateOutletContext]= “{'External_name': value, ...}”` .
+
+6. Template Element Reference using the `#` 
+
+7. `@ViewChild` && `@ViewChildren` : 
+    1. used to access and manipulate the elements and components in their template.
+    2. Basic Syntax: 
+        1. `@ViewChild(selector) propertyName: ElementRef;` 
+        2. `@ViewChildren(selector) propertyName: QueryList<ElementRef>;`
+    3. you can access a child component by using a reference on its selector directly.
+    4. Can loop over the `QueryList` using the `foreach()` 
+
+8. @ContentChild && @ContentChildren
+
+9. Component Life Cycle Hooks:
+          1- constructor
+          2- ngOnChange
+          3- ngOnInit
+          4- ngOnDoCheck
+          5- ngAfterContentInit
+          6- ngAfterContentCheck
+          7- ngAfterViewInit
+          8- ngAfterViewCheck
+          9- ngOnDestroy
+
+
+>> Angular-specific elements/directives:
+
+*content projection:
+
+`ng-content`
+
+`ng-content-as`
+
+*Structural directives:
+
+`@if, @for, @switch, @else, @case, @default, @empty`
+
+*template container:
+
+`ng-container`
+
+`ng-template`
+
+*Advanced directives:
+
+`[ngClass], [ngStyle], [ngModel], [ngForm], [ngModelGroup]`
+
+*Build-in Directives:
+
+`ngTemplateOutlet`
+
+`ngTemplateOutletContext`          
 -->

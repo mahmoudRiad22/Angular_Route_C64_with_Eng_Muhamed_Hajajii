@@ -1,23 +1,30 @@
 <section #Home class="py-5 w-75 m-auto">
-      <div class="container">
-        <div class="bg-danger-subtle h-100 w-100 p-3 rounded-3">
-          <h3 class="text-center">Data viewer</h3>
-          <br />
+  <div class="container">
+    <div class="bg-danger-subtle h-100 w-100 p-3 rounded-3">
+      <h3 class="text-center">Data viewer</h3>
+      <br />
 
-          <div class="p-3 bg-warning w-50 m-auto">
-            <label class="ps-1 d-block" for="UserName">New name:</label>
-            <input
-              [(ngModel)]="InputName"
-              class="form-control w-100 m-auto"
-              type="text"
-              name="UserName"
-              id=""
-            />
-            <br />
-            <div class="text-center">
-              <button class="btn btn-primary" (click)="saveInput()">Change Name</button>
-            </div>
-          </div>
+      <div class="p-3 bg-warning w-50 m-auto">
+        <label class="ps-1 d-block" for="UserName">New name:</label>
+        <input
+          [(ngModel)]="InputName"
+          [(ngModel)]="staticUser"
+          class="form-control w-100 m-auto"
+          type="text"
+          name="UserName"
+          id=""
+        />
+        <br />
+        <div class="text-center">
+          <button class="btn btn-primary" (click)="saveInput()" (click)="DisplayInputOnConsole()">
+            Change Name
+          </button>
         </div>
       </div>
+    </div>
+  </div>
 </section>
+<ng-content>default 1 <br /></ng-content>
+<ng-content>default 2 <br /></ng-content>
+<ng-content>default 3 <br /></ng-content>
+<ng-content>default 4 <br /></ng-content>
