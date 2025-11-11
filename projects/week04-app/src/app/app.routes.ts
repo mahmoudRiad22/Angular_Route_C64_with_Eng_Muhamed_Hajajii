@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { LazyLoadingComponent } from './components/lazy-loading/lazy-loading.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,11 @@ export const routes: Routes = [
     path: 'profile',
     component: UserProfileComponent,
     title: 'Week04-app - Profile',
+  },
+  {
+    path:"lazyLoading",
+    component:LazyLoadingComponent,
+    title:"Week04-app - lazyLoading"
   },
   {
     path: 'not-found',
