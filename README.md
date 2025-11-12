@@ -4,6 +4,7 @@
 0- update packages:
     npm update
     npm install @angular/core@latest @angular/cli@latest
+    ng update
 
 1- install packages:
     npm i          
