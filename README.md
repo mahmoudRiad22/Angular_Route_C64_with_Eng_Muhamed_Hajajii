@@ -1,6 +1,10 @@
 # AngularRouteC64WithEngMuhamedHajajii
 
 ````bash
+0- update packages:
+    npm update
+    npm install @angular/core@latest @angular/cli@latest
+
 1- install packages:
     npm i          
 

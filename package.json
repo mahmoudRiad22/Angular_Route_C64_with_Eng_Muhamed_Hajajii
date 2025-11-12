@@ -9,11 +9,10 @@
     "test": "ng test",
     "i:bs": "npm i bootstrap",
     "i:faw": "npm i @fortawesome/fontawesome-free",
-    "i:tw3":"npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
-
+    "i:tw3": "npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
   },
   "prettier": {
-    "tabWidth": 4,
+    "tabWidth": 2,
     "useTabs": false,
     "printWidth": 100,
     "singleQuote": true,
@@ -30,7 +29,7 @@
   "dependencies": {
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
-    "@angular/core": "^20.3.0",
+    "@angular/core": "^20.3.10",
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
@@ -38,7 +37,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/cli": "^20.3.4",
+    "@angular/cli": "^20.3.9",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.9.0",
