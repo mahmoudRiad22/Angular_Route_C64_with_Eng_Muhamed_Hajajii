@@ -1,1 +1,63 @@
 <p>home works!</p>
+<!-- >> Sugar syntax for Injectable:-->
+<!--   todo 01: create the task in notion using the access modifiers and sugar syntax -->
+
+<!-- todo 02: Q&A
+        -- how does the async operations are handled in Js?[stack => webApi => queue => eventLoop => stack]
+        -- how do we handle the async Operations in JS? [callbacks, promises, fetch]
+        -- What is RXJS and how does it handle the Async operations? [using the observable pattern]
+        -- Compare between the Observable and the Promises.
+        -- what is observable in angular and how does it work?
+        -- -->
+
+<!-- >> Observables: 
+      * How does it work:
+          -- the observable only fires when its subscribed to.[subscribe to fire]
+          -- Can receive return in callback "()=>{}" or object{"next","complete","error"}  
+          -- uses "next", "complete", "error"..they all are callbacks funcs to handle the observable control flow.
+          -- you can unsubscribe.
+          -- can use pip operators and creation RXJS operators
+                  // pipe operators
+                  observable.pipe(
+                      filter(x => x > 5),
+                      map(x => x * 2),
+                      take(3)
+                  ).subscribe();
+
+                  // Creation operators
+                  of(1,2,3), from([1,2,3]), interval(1000), etc.
+          -- Cold VS Hot Observables:
+              ?Cold: "Private Stream"  for each sub..start execution on subscription [HTTP calls]
+              ?Hot: "Public broadcast" for all subs..Shares execution between subscribers [DOM Event]
+          -- must Unsubscribe for good memory management
+-->
+<!-- todo 03: Create a ticket for observable Operation and implement it -->
+
+<!-- >> Calling the API: -->
+<!-- * APIs in angular using HTTPClient:
+  -- HTTPClient: is a services by angular used to handle the [get, post, put, delete] operations for APIs.
+  -- uses the XMLHttpRequest [create, open, send, receive respond]
+  -- to use that SERVICE you must add it as injectable and provide it too.
+  -- any api method calling using  this HTTPClient service  will return an "Observable".
+  * how to call API using the HTTPClient?
+    -- 01: inject the httpClient using the auto inject in the constructor
+    -- 02: Provide the httpClient in the "app.config.ts" with [withFetch()].
+    -- 03: implement OnInit() to initialize the http call
+    -- 04: start you crud operation inside the OnInit().
+-->
+
+<!-- >> Practice: -->
+<!-- todo 04: Display the response of the following API using the httpClient in angular
+* https://jsonplaceholder.typicode.com/
+-->
+
+<!-- todo 05: Display the response of the following API using the httpClient in angular 
+* https://fakestoreapi.com/docs#tag/Products/operation/getAllProducts
+* https://fakestoreapi.com/carts
+* https://fakestoreapi.com/users
+-->
+
+<!-- todo 06: Display the response of the following API using the httpClient in angular
+* https://fakeapi.platzi.com/en/rest/swagger/ 
+-->
+
