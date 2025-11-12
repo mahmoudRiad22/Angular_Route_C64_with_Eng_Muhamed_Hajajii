@@ -5,7 +5,12 @@
   "projects": {
     "week05-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
+        }
+      },
       "root": "projects/week05-app",
       "sourceRoot": "projects/week05-app/src",
       "prefix": "app",
