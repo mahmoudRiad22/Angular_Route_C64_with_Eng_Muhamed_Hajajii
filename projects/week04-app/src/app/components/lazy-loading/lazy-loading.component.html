@@ -1,1 +1,111 @@
 <p>lazy-loading works!</p>
+
+<!------------------------------------------------------------------>
+<!------------------------- Lazy Loading --------------------------->
+<!------------------------------------------------------------------>
+
+<!-- >> lazyLoading:
+  * all we have done so far was known as an "eager loading"
+    -- Eager Loading:
+        is the loading of all the components of the app with the initial request of the app.
+        How does it know its an Eager Loading? ==> cuz of the the import lines in the Router.ts
+        Overall bigger initial bundle size
+    -- LazyLoading:
+        its to stop the app from loading all the components based on the import lines in the router.ts
+        how? ===> by using the "dynamic locating"
+    -- Dynamic Loading:
+        Using the import() inside a functions that get called when that import is required.
+        used to reduce the initial bundle size into shanks gets called when needed.
+-->
+<!-- todo 05: Create the following page using Lazy loading approach:
+            /university
+            ├── /engineering
+            │   ├── /computer-science
+            │   │   ├── /year-1
+            │   │   ├── /year-2
+            │   │   └── /year-3
+            │   └── /mechanical
+            │       ├── /year-1
+            │       └── /year-2
+            ├── /business
+            │   ├── /finance
+            │   │   ├── /undergrad
+            │   │   └── /masters
+            │   └── /marketing
+            └── /faculty
+                ├── /profiles
+                └── /schedules
+-->
+
+<!------------------------------------------------------------------>
+<!-------------- Production Vs Development ------------------------->
+<!------------------------------------------------------------------>
+<!-- ! --configuration=production  VS --configuration=development
+
+  ?In Production mode:
+      -- uses the AOT compiler approach: which compile the files during the building process.
+      -- this allow the files to be minimized and the apply the LazyLoading strategy.
+      -- it can show you the initial bundle size, so you can check if the size has exceeded the size in the "angular.json"
+  ?In Development mode:
+      -- it used the JIT compiler approach: which compile the file in the browser during the run time.
+      -- this allow for easier debugging and for the "Angular dev" extension to run.
+-->
+<!-- todo 06: Explain the difference between the production flag and the development flag when serving the application.
+<!------------------------------------------------------------------>
+<!------------------- Deffer directive ----------------------------->
+<!------------------------------------------------------------------>
+<!-- >> @defer: [@placeholder, @loading, @error]
+    *0- @placeholder: its used as a placeholder or for empty interaction.
+          -- must have a single root node aka a single tag contains the placeholder
+          -- will be used as default interaction unless a reference is used.
+          -- @loading: from its name used to render a loading indicator until the data is ready to be viewed.
+          -- @error: appears when it failed to load a response [ex: connection error].
+    *1- MUST be applied on a Standalone component only.
+    *2- by default its set to work "on Idle".
+    *3- can be used with either [on] or [when].
+      ? On:
+        -- on timer(1000ms)
+        -- on interaction(ElementRef):when the element referenced has been interacted with [or placeholder if empty].
+        -- on hover(ElementRef): when the element referenced has been hovered on.
+        -- on viewport(ElementRef): when the element referenced is shown on the viewport.
+        -- on immediate: takes priority if multiple "defer" exists.
+        -- on idle: default value for default.
+        -- om prefetch: requests the chunk based on an initial interaction then render it on the final interaction is done.
+          *syntax:
+            *@defer (on interaction(ElementRef); on interaction(ElementRef))
+                        -- final interaction        -- initial interaction
+
+      ? When true/false: 
+        -- a conditional expression is used with it to view or not view the deferred content
+-->
+
+<!-- todo 07:
+-- take products response
+  -- display these products in the view using a for loop
+  -- use a @defer to view a related-products section with a loading screen and a placeholder 
+-->
+
+<!------------------------------------------------------------------>
+<!----------------------------- Services --------------------------->
+<!------------------------------------------------------------------>
+
+<!-- >> Services:
+  
+
+-->
+<!-- todo 08: Create a Service:
+  1- create a users array
+  2- create a btn that adds new users to the array
+  3- display the users array
+  -- approach 01:
+  4- apply approach one by sharing the same logic and data in services ts file [import and export]. 
+  ? what's the problem?
+  -- approach 02;
+  5- apply approach by using the class build strategy [Single class export]
+  ? what's the problem?
+  -- approach 03:
+  6- apply approach using the Dependency injection principle [hint: constructor, provider]  
+
+
+
+-->
