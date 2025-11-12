@@ -1,24 +1,27 @@
 # AngularRouteC64WithEngMuhamedHajajii
 
 ````bash
+0- update packages:
+    npm update
+
 1- install packages:
-    npm i          
+    npm i
 
 2- install bootstrap:
-     npm run i:bs     
+     npm run i:bs
 
 3- install fontawesome:
-    npm run i:faw     
+    npm run i:faw
 
 4- generate new app:
-    ng g app "app-name" 
+    ng g app "app-name"
 
 5- !IMPORTANT move inside the project folder;
-    cd project-folder    
+    cd project-folder
     EX: cd projects/app01
 
 6- install tailwindcss 3.4.17:
-    npm run i:tw3        
+    npm run i:tw3
 
 7- add this to tailwind.config.js
 ```js
