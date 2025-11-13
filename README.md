@@ -27,7 +27,7 @@
 ```js
             /** @type {import('tailwindcss').Config} */
             export default {
-            content: ["./projects/app01/src/**/*.{html,js}"], /*use windsurf to autocomplete it*/
+            content: ["./projects/app01/src/**/*.{html,js,ts}"], /*use windsurf to autocomplete it*/
             theme: {
                 extend: {},
             },
@@ -39,10 +39,10 @@
     @tailwind component
     @tailwind utilities
 
-9- link your input and output files properly using this command
+9- link your input and output files properly using this command [step 5 is a must before this]
     npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
 
-10- add this to your app component:
+10- add this to your app component or your CSS does not get overridden:
     encapsulation: ViewEncapsulation.None
 
 ````
