@@ -12,6 +12,7 @@ export class HomeComponent {
         name: 'mahmoud',
         age: '30',
     };
+
     constructor() {
         // >> invoke the promise
         const promise01 = new Promise((resolved, rejected) => {
@@ -39,19 +40,18 @@ export class HomeComponent {
             o.next('msg 08');
             o.next('msg 09');
             o.next(this.userData);
-            o.error("Error");
+            o.error('Error');
         });
-        observable01.subscribe({
-            next: (oRes) => {
-                // const finalRes = typeof res === 'string' res: JSON.stringify()
-                console.log(`%c` + oRes, 'color: violet');
-            },
-            error: (oErr) => {
-                console.log(`%c` + oErr, 'color: red');
-            },
-        }).unsubscribe();
-
-
+        observable01
+            .subscribe({
+                next: (oRes) => {
+                    // const finalRes = typeof res === 'string' res: JSON.stringify()
+                    console.log(`%c` + oRes, 'color: violet');
+                },
+                error: (oErr) => {
+                    console.log(`%c` + oErr, 'color: red');
+                },
+            })
+            .unsubscribe();
     }
 }
-
