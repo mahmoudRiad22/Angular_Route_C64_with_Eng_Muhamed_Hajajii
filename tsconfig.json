@@ -28,5 +28,13 @@
     "useTabs": false,
     "printWidth": 100,
     "singleQuote": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/tailwind3-app/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/tailwind3-app/tsconfig.spec.json"
+    }
+  ]
 }

@@ -37,15 +37,15 @@
             }
 
 8- add this to your styles.css
-    @tailwind base
-    @tailwind component
-    @tailwind utilities
+    @tailwind base;
+    @tailwind component;
+    @tailwind utilities;
 
 9- link your input and output files properly using this command
     npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
 
 10- add this to your app component:
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None   # import from angular/core
 
 ````
 
