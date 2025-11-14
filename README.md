@@ -23,13 +23,17 @@
     EX: cd projects/app01
 
 6- install tailwindcss 3.4.17:
-    npm run i:tw3        
+    npm run i:tw3 #a script
+    or 
+    npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init        
+// you should find a file 'tailwindcss.config.js' inside the "src" folder.
+
 
 7- add this to tailwind.config.js
 ```js
             /** @type {import('tailwindcss').Config} */
             export default {
-            content: ["./projects/app01/src/**/*.{html,js}"], /*use windsurf to autocomplete it*/
+            content: ["./src/**/*.{html,js}"], /*use windsurf to autocomplete it*/
             theme: {
                 extend: {},
             },
@@ -37,15 +41,31 @@
             }
 
 8- add this to your styles.css
-    @tailwind base
-    @tailwind component
-    @tailwind utilities
+    @tailwind base;
+    @tailwind component;
+    @tailwind utilities;
+
+
+8.1- PostCSS configuration (optional)
+    inside "src" create a file called '.postcssrc.json'
+    then add to it:
+        {
+            "plugins": {
+                "tailwindcss": {},
+                "autoprefixer": {}
+        }
+}
+8.2- run: ng s # in terminal to serve the app
+
+8.3- add this to app.html file to test it:
+    <h1 class="text-3xl font-bold underline">Hello Tailwind!</h1>
+
 
 9- link your input and output files properly using this command
     npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
 
 10- add this to your app component:
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None   # import from angular/core
 
 ````
 
