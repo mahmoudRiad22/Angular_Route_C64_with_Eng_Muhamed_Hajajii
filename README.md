@@ -1,75 +1,220 @@
-# AngularRouteC64WithEngMuhamedHajajii
+# **_AngularRouteC64WithEngMuhamedHajajii_**
 
-````bash
-0- update packages:
-    npm update
-    npm install @angular/core@latest @angular/cli@latest
-    ng update
+<details>
 
-1- install packages:
-    npm i          
+#### 0- update packages:
 
-2- install bootstrap:
-     npm run i:bs     
+```bash
+        npm update
+        npm install @angular/core@latest @angular/cli@latest
+        ng update
+```
 
-3- install fontawesome:
-    npm run i:faw     
+#### 1- install packages:
 
-4- generate new app:
-    ng g app "app-name" 
+```bash
+npm i
+```
 
-5- !IMPORTANT move inside the project folder;
-    cd project-folder    
-    EX: cd projects/app01
+#### 2- install bootstrap:
 
-6- install tailwindcss 3.4.17:
-    npm run i:tw3 #a script
-    or 
-    npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init        
-// you should find a file 'tailwindcss.config.js' inside the "src" folder.
+```bash
+npm run i:bs
+```
 
+#### 3- install fontawesome:
 
-7- add this to tailwind.config.js
+```bash
+        npm run i:faw
+```
+
+#### 4- generate new app:
+
+```bash
+        ng g app "app-name"
+```
+
+#### 5- !IMPORTANT move inside the project folder;
+
+```bash
+        cd project-folder
+        EX: cd projects/app01
+```
+
+#### 6- install tailwindcss 3.4.17:
+
+```bash
+        npm run i:tw3 #a script
+    # or
+        npm i -D tailwindcss@3 postcss autoprefixer
+        npx tailwindcss@3 init
+    #  you should find a file 'tailwindcss.config.js' inside the "src" folder.
+```
+
+#### 7- add this to tailwind.config.js
+
 ```js
-            /** @type {import('tailwindcss').Config} */
-            export default {
-            content: ["./src/**/*.{html,js}"], /*use windsurf to autocomplete it*/
-            theme: {
-                extend: {},
-            },
-            plugins: [],
-            }
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{html,js}'] /*use windsurf to autocomplete it*/,
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-8- add this to your styles.css
-    @tailwind base;
-    @tailwind component;
-    @tailwind utilities;
+#### 8- add this to your styles.css
 
+```css
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+```
 
-8.1- PostCSS configuration (optional)
-    inside "src" create a file called '.postcssrc.json'
-    then add to it:
-        {
-            "plugins": {
-                "tailwindcss": {},
-                "autoprefixer": {}
-        }
+#### 8.1- PostCSS configuration (optional)
+
+```json
+// inside "src" create a file called '.postcssrc.json'
+// then add to it:
+{
+  "plugins": {
+    "tailwindcss": {},
+    "autoprefixer": {}
+  }
 }
-8.2- run: ng s # in terminal to serve the app
+```
 
-8.3- add this to app.html file to test it:
-    <h1 class="text-3xl font-bold underline">Hello Tailwind!</h1>
+#### 8.2- run:
+
+```bash
+ng s # in terminal to serve the app
+```
+
+#### 8.3- add this to app.html file to test it:
+
+```html
+<h1 class="text-3xl font-bold underline">Hello Tailwind!</h1>
+```
+
+#### 9- link your input and output files properly using this command
+
+```bash
+        npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
+```
+
+#### 10- add this to your app component:
+
+```ts
+        encapsulation: ViewEncapsulation.None   # import from angular/core
+```
+
+</details>
+
+---
+
+## ***Setup Your New App with Tailwind:***
+
+<details>
+
+### 1- update and install "package.json"
+
+```bash
+# make sure everything in package.json is up-to-date
+ng update
+npm update
+
+# install the packages.json
+npm i
+```
+
+---
+
+### 2- Create Angular app
+
+```bash
+# Generate a new app inside your project Folder
+
+ng g app app-name    # this generate new app inside the same workspace you have
+
+# Create new angular workspace with new app
+ng new app-name      # this create a new workspace with new app
+
+```
+
+---
+
+### 3- install tailwindcss:
+
+```bash
+# inside your root project [project/app-name]
 
 
-9- link your input and output files properly using this command
-    npx tailwindcss -i ./src/styles.css -o ./src/app/app.css -w
+# install tailwind v3
+npm i -D tailwindcss@3 postcss autoprefixer
 
-10- add this to your app component:
-    encapsulation: ViewEncapsulation.None   # import from angular/core
+# initialize it by creating the tailwindcss.config.js
+npx tailwindcss@3 init
 
-````
+```
 
-## Workspace default md:
+---
+
+### 4- Config Tailwindcss:
+
+```js
+// inside your tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{html,js}'] /*use windsurf to autocomplete it*/,
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+---
+
+```css
+/* Inside your styles.css file [projects/app-name/src/styles.css] */
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+```
+
+---
+
+```json
+// inside your app folder [projects/app-name]
+// create a file with exactly '.postcssrc.json'
+//  then add this inside it
+{
+  "plugins": {
+    "tailwindcss": {},
+    "autoprefixer": {}
+  }
+}
+```
+
+### 5- Serve and test it:
+
+```html
+<!-- add this inside you app.html -->
+<h1 class="text-3xl font-bold underline">Hello Tailwind!</h1>
+```
+
+---
+
+```bash
+# in your terminal
+ng s -o
+```
+
+</details>
+
+## ***Workspace default md:***
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.<details>
 
@@ -133,7 +278,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 ---
 
-# The Correct Git Branch Workflow
+# ***The Correct Git Branch Workflow***
 
 <details>
 <summary><b><i>Details</i></b></summary>
@@ -230,8 +375,8 @@ git push origin week02_app
 
 Since you're on `week01_app` and have committed:
 
--   Continue developing and pushing to `week01_app`
--   Only merge to `main` when Week 1 app is **completely finished**
--   Then create `week02_app` branch and repeat the process
+- Continue developing and pushing to `week01_app`
+- Only merge to `main` when Week 1 app is **completely finished**
+- Then create `week02_app` branch and repeat the process
 
 </details>
