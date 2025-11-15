@@ -12,10 +12,7 @@ export class Navbar {
 
 
   toggle = true
-@ViewChild('navLinks') navLinks!:ElementRef
 showNavLinks():void{
-  // if ((this.navLinks.nativeElement as HTMLElement).classList.contains('hidden'))
-  //     (this.navLinks.nativeElement as HTMLElement).classList.remove('hidden')
   console.log(this.toggle);
   this.toggle = !this.toggle
 }
