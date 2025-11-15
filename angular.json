@@ -14,9 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/tailwind3-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/tailwind3-app/tsconfig.app.json",
             "assets": [
               {
@@ -25,8 +23,10 @@
               }
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "projects/tailwind3-app/src/styles.css"
-            ]
+            ],
+            "scripts": ["node_modules/@fortawesome/fontawesome-free/js/all.min.js"]
           },
           "configurations": {
             "production": {
@@ -70,10 +70,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/tailwind3-app/tsconfig.spec.json",
             "assets": [
               {
@@ -81,9 +78,7 @@
                 "input": "projects/tailwind3-app/public"
               }
             ],
-            "styles": [
-              "projects/tailwind3-app/src/styles.css"
-            ]
+            "styles": ["projects/tailwind3-app/src/styles.css"]
           }
         }
       }
