@@ -1,6 +1,6 @@
-<main class="min-h-screen">
+<main class="min-h-screen bg-slate-600">
   <section class="py-3 bg-orange-300">
-    <div class="container text-center">
+    <div class="text-center ">
       <p class="text-3xl p-9">core-concepts works!</p>
       <button class="dark:md:hover:bg-fuchsia-600">Save changes</button> <br />
       <br />
@@ -13,61 +13,65 @@
   </section>
 
   <!-- navbar 2nd time  -->
+<!-- todo: create the responsive burger bar for this one -->
   <section class="text-center">
     <div class="bg-red-600 ">
       <p class="text-4xl text-center capitalize">navbar 02</p>
 
-        <div class="w-11/12 mx-auto bg-red-300 lg:flex lg:items-center lg:justify-between h-14">
+        <div class="relative flex items-center justify-between bg-red-300 h-14">
           <div class="logo">
             <span class="p-2 text-xl font-bold text-black">navbar02</span>
           </div>
-          <div class="nav-links">
-            <ul class="lg:flex">
-              <li>
+          <div class="absolute w-full lg:block nav-links top-full lg:relative lg:top-0 lg:px-4" [ngClass]="{'hidden':toggle01}">
+            <ul class="w-full lg:w-auto lg:flex lg:justify-end">
+              <li class="py-0.5">
                 <a
-                  class="px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
+                  class="inline-block w-2/5 lg:w-auto px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
                   href=""
                   >link</a
                 >
               </li>
-              <li>
+              <li class="py-0.5">
                 <a
-                  class="px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
+                  class="inline-block w-2/5 lg:w-auto px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
                   href=""
                   >link</a
                 >
               </li>
-              <li>
+              <li class="py-0.5">
                 <a
-                  class="px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
+                  class="inline-block w-2/5 lg:w-auto px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
                   href=""
                   >link</a
                 >
               </li>
-              <li>
+              <li class="py-0.5">
                 <a
-                  class="px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
+                  class="inline-block w-2/5 lg:w-auto px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
                   href=""
                   >link</a
                 >
               </li>
-              <li>
+              <li class="py-0.5">
                 <a
-                  class="px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
+                  class="inline-block w-2/5 lg:w-auto px-3 py-1 mx-0.5 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg"
                   href=""
                   >link</a
                 >
               </li>
             </ul>
           </div>
+          <div class="px-4 lg:hidden">
+            <button (click)="showNavLinks01()" ><i class="fa-solid fa-bars"></i></button>
+          </div>
         </div>
     </div>
   </section>
-
+<!-- navbar 3rd time -->
   <section class="pb-96">
     <p class="text-4xl font-bold text-center capitalize">navbar 03</p>
-    <div class="w-11/12 py-3 mx-auto ">
-      <div class="relative bg-black rounded-t-lg lg:rounded-lg lg:overflow-hidden">
+    <div class="py-3 mx-auto ">
+      <div class="relative bg-black lg:overflow-hidden">
         <!-- <div class="absolute ">
           <img class="block w-full -z-10" src="./images/1.jpg" alt=""/>
         </div> -->
@@ -75,7 +79,7 @@
           <div class="px-3 nav-icon">
             <span class="items-center text-2xl italic font-bold text-white uppercase whitespace-nowrap">navbar 03</span>
           </div>
-          <div class="absolute left-0 w-full rounded-b-3xl lg:rounded-b-lg lg:block top-full lg:relative lg:top-0 lg:end-0" [ngClass]="{'hidden':toggle}">
+          <div class="absolute left-0 w-full rounded-b-3xl lg:rounded-b-lg lg:block top-full lg:relative lg:top-0 lg:end-0" [ngClass]="{'hidden':toggle02}">
             <ul class="flex flex-col justify-center text-center bg-black/85 lg:px-3 lg:flex-row lg:justify-end">
               <li class="py-3 px- lg:px-3"><a class="px-8 py-2 text-white lg:px-3 rounded-3xl hover:bg-white/60 bg-white/25" href="">link</a></li>
               <li class="py-3 px- lg:px-3"><a class="px-8 py-2 text-white lg:px-3 rounded-3xl hover:bg-white/60 bg-white/25" href="">link</a></li>
@@ -84,7 +88,7 @@
             </ul>
           </div>
           <div class="inline px-4 lg:hidden humbergur-btn">
-            <button (click)="showNavLinks()"><i class="text-white fa-solid fa-bars"></i></button>
+            <button (click)="showNavLinks02()"><i class="text-white fa-solid fa-bars"></i></button>
           </div>
         </div>
       </div>
