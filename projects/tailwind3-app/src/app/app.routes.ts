@@ -1,17 +1,16 @@
 import { Routes } from '@angular/router';
-import { Navbar } from './components/navbar/navbar';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'coreConcepts',
+    redirectTo: 'nav-bars',
     pathMatch: 'full',
   },
   {
-    path: 'coreConcepts',
+    path: 'nav-bars',
     loadComponent: () =>
       import('./components/core-concepts/core-concepts').then((m) => m.CoreConcepts),
-    title: 'Tailwind3 - Core Concept',
+    title: 'Tailwind3 - Nav-Bars',
   },
   {
     path: 'not-found',
