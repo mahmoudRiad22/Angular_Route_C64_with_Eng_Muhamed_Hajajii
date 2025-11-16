@@ -1,6 +1,6 @@
 <section class="bg-lime-100">
   <div class="w-11/12 mx-auto">
-    <h2 class="py-4 text-4xl text-center">FlexBox Playground</h2>
+    <h2 class="py-4 text-4xl text-center">1- FlexBox Playground</h2>
 
     <!-- >> FlexBox Summary:
   *when dealing with flexbox you need to know what classes goes for parent and what goes for children
@@ -280,14 +280,13 @@
       </div>
     </div>
   </div>
-
-  <!-- todo: peer and group in tailwindcss -->
+  <!-- todo: peer and group in tailwindcss
+    *create a div has 4 radial options
+    *when each option is checker it changes its style
+    * and shows a specific paragraph for it-->
 
   <div class="w-11/12 mx-auto">
-    <!-- *create a div has 4 radial options
-          *when each option is checker it changes its style
-          * and shows a specific paragraph for it-->
-    <br />
+    <h2 class="text-4xl text-center py-7">2- Tailwind Group and Peer</h2>
     <!-- radial inputs -->
     <!-- <div class="flex py-6 gap-x-3"> -->
     <input
@@ -365,11 +364,82 @@
   </div>
 
   <br /><br />
-  <div class="w-11/12 mx-auto">
-    <h2>Grid playground</h2>
+  <div
+    class="relative w-full h-screen bg-fixed bg-center bg-cover"
+    [style.backgroundImage]="'url(/images/4.jpg)'"
+  >
+    <div class="absolute top-0 bottom-0 left-0 right-0 z-0 bg-black/50"></div>
+    <div class="relative z-10 text-white">
+      <h2 class="text-4xl font-bold text-center text-white">Grid playground</h2>
+      <!-- >> Grid Summary:
+      ?Parent classes [6 total]:
+      -- grid/inline-grid: used to activate the grid system
+      -- grid-cols-*/grid-rows-*: used to control how many columns and rows of the grid structure.
+      -- grid-flow-*/grid-flow-*-dense: used for normal flow of the cells, or being aggressive to make sure gaps are left to the very end and not in between
+      -- gridGap: used to determine the gaps between the cells, as always gap is a magic word it always works.
+      -- GridItems: refers to items inside the cells, hence justify-items and align-items affects the content inside the cells themselves.
+      -- GridContent: refers to the entire grid system to justify[MainAxis] it or align[CrossAxis] it properly as a whole withe respect to its parent.
+      ?Child Classes [6 total]:
+      -- *-span-*: change the size of the child cell relative to its current location in the grid.
+      -- *-*start-*: change the position on which the cell
+      -->
 
-    <!-- >> Grid Summary:
-      
--->
+      <div class="relative text-black">
+        <!-- PARENT -->
+        <div class="grid grid-cols-4 grid-rows-[auto,1fr,auto] gap-4 min-h-screen">
+          <!-- CHILD - Header (full width) -->
+          <header class="col-span-4 p-4 text-white bg-gray-800">Header</header>
+
+          <!-- CHILD - Sidebar (fixed column) -->
+          <aside class="col-span-1 row-span-2 p-4 bg-gray-200">Sidebar</aside>
+
+          <!-- CHILD - Main content (span 3 columns) -->
+          <main class="col-span-3 p-4 bg-white">Main Content</main>
+
+          <!-- CHILD - Widget (specific position) -->
+          <div class="col-start-2 col-end-4 p-4 bg-yellow-100">Widget</div>
+
+          <!-- CHILD - Footer (full width) -->
+          <footer class="col-span-4 p-4 text-white bg-gray-800">Footer</footer>
+        </div>
+      </div>
+      <br /><br />
+      <!-- dashboard example to practice Grid -->
+      <div class="w-11/12 px-6 py-12 mx-auto bg-gray-200">
+        <div class="grid grid-cols-12 gap-2 align-middle grid-flow-dense grid-rows-12">
+          <div class="col-span-4 row-span-3 rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">analytics overview</span>
+          </div>
+          <div class="col-span-6 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
+            
+          </div>
+          <div class="col-span-2 row-span-1 text-center text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">April 2025 </span>
+            
+          </div>
+          <div class="col-span-4 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
+            
+          </div>
+          <div class="col-span-2 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">total orders</span>
+            
+          </div>
+          <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">visitor acquisition</span>
+            
+          </div>
+          <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
+            
+          </div>
+          <div class="col-span-4 row-span-4 text-black rounded-md shadow-lg bg-gray-50">
+            <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
