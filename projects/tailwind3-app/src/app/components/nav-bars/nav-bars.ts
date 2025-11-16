@@ -2,12 +2,12 @@ import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-core-concepts',
+  selector: 'app-nav-bars',
   imports: [NgClass],
-  templateUrl: './core-concepts.html',
-  styleUrl: './core-concepts.css',
+  templateUrl: './nav-bars.html',
+  styleUrl: './nav-bars.css',
 })
-export class CoreConcepts {
+export class NavBars {
   toggle01 = true;
   showNavLinks01(): void {
     console.log('it works');

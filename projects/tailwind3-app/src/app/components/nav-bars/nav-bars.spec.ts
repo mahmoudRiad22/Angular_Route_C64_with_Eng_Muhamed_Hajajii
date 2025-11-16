@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoreConcepts } from './core-concepts';
+import { NavBars } from './nav-bars';
 
-describe('CoreConcepts', () => {
-  let component: CoreConcepts;
-  let fixture: ComponentFixture<CoreConcepts>;
+describe('NavBars', () => {
+  let component: NavBars;
+  let fixture: ComponentFixture<NavBars>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CoreConcepts]
+      imports: [NavBars]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CoreConcepts);
+    fixture = TestBed.createComponent(NavBars);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

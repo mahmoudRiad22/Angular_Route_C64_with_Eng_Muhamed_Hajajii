@@ -9,8 +9,16 @@ export const routes: Routes = [
   {
     path: 'nav-bars',
     loadComponent: () =>
-      import('./components/core-concepts/core-concepts').then((m) => m.CoreConcepts),
+      import('./components//nav-bars/nav-bars').then((m) => m.NavBars),
     title: 'Tailwind3 - Nav-Bars',
+  },
+  {
+    path:"flexBox-grid",
+    loadComponent:() => {
+      return import('./components/flexbox-grid/flexbox-grid').then((m) => {
+        return m.FlexboxGrid
+      })
+    }
   },
   {
     path: 'not-found',
