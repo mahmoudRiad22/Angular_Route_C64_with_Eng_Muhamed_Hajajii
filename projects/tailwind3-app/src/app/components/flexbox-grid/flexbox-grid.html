@@ -1,1 +1,70 @@
-<p>flexbox-grid works!</p>
+<!-- >> FlexBox:
+  *when dealing with flexbox you need to know what classes goes for parent and what goes for children
+
+  ?Parent Classes [7 total]:
+    -- flexDisplay: the way the flexbox gonna display its items
+    -- flexDirection: in what direction the flexbox gonna display its items
+    -- flexWrapping: are the items gonna be wrapped to next line or not?
+    -- flexJustifyContent: control the spaces between flexItems on the MainAxis.
+    -- flexAlignItems: control the space between flexItems in the CrossAxis.
+    -- flexAlignContent: if there is a wrap happened, it controls the space between the lines of wrapped items
+    -- flexGap: Creates a gap between the flexItems its like magic always find its way to make it happen.
+    
+  todo: the flexbox child classes
+  ?Child Classes [5 total];
+    -- Order: override the default order of showing flexItems.
+    -- flexGrow: the child who has it will grow relatively to other items and fill up the free spaces if it's available.
+    -- flexShrink: Child who has it will be the first to shrink himself "relatively to other flexItems"
+          -if the spaces are smaller than the overall spaces needed for all flexItems.
+    -- flexBasis: define the initial size of each flexItem.
+    -- flexAlignSelf: acts like a disobedient child and align itself on the crossAxis with its own mind.
+-->
+
+<section class=" bg-lime-100">
+
+  <div class="w-11/12 mx-auto">
+    <h2 class="py-4 text-4xl text-center">FlexBox Playground</h2>
+    <!-- Align Content -->
+    <!-- Only applies when flex-wrap: wrap AND multiple lines -->
+    <div class="flex flex-wrap items-center content-center justify-center h-64 bg-red-300 gap-7">
+      <div class="w-1/5 bg-yellow-100">Item 1</div>
+      <div class="w-1/5 bg-yellow-200">Item 2</div>
+      <div class="w-1/5 bg-yellow-300">Item 3</div>
+      <div class="w-1/5 bg-yellow-400">Item 4</div>
+      <div class="w-1/5 bg-yellow-500">Item 5</div>
+      <div class="w-1/5 bg-yellow-600">Item 6</div>
+    </div>
+    <br />
+    <div class="flex flex-wrap items-start content-center gap-6 p-8 align-middle rounded-md bg-cyan-100">
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 1</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 2</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 3</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 4</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 5</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 6</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 7</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 8</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 9</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 10</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 11</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 12</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 13</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 14</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 15</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 16</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 17</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 18</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 19</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 20</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 21</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 22</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 23</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 24</div>
+      <div class="px-3 py-2 transition-all duration-300 rounded-md ring-1 hover:ring-2 ring-indigo-600 hover:bg-indigo-400 hover:cursor-pointer hover:text-white">cardTitle 25</div>
+    </div>
+    <br /><br />
+  </div>
+  <div class="w-11/12 mx-auto">
+    <h2>Grid playground</h2>
+  </div>
+</section>

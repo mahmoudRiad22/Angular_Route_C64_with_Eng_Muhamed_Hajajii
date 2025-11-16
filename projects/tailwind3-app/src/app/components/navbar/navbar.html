@@ -1,7 +1,7 @@
 <section class="z-50 transition-all duration-1000 bg-emerald-100">
-  <div class="">
+  <div class="w-11/12 mx-auto">
     <div class="relative flex items-center justify-between py-2">
-      <div class="m-0 lg:mx-10 whitespace-nowrap">
+      <div class=" whitespace-nowrap">
         <a routerLink="" class="font-bold">Week06-Tailwind</a>
       </div>
       <div
@@ -9,16 +9,16 @@
         class="absolute hidden w-screen lg:block lg:relative top-10 lg:top-0"
         [ngClass]="{ hidden: toggle }"
       >
-        <ul class="flex flex-col items-center justify-between lg:pe-10 lg:flex-row lg:justify-end">
+        <ul class="flex flex-col items-center justify-between lg:flex-row lg:justify-end">
           <li
-            class="px-2 py-1 rounded-md hover:bg-emerald-300"
+            class="px-2 py-1 mx-1 rounded-md hover:bg-emerald-300"
             [routerLinkActive]="'font-bold bg-emerald-400'"
             [routerLinkActiveOptions]="{ exact: true }"
           >
             <a routerLink="nav-bars">Nav-bars</a>
           </li>
           <li
-            class="px-2 py-1 rounded-md hover:bg-emerald-300"
+            class="px-2 py-1 mx-1 rounded-md hover:bg-emerald-300"
             [routerLinkActive]="'font-bold bg-emerald-400'"
             [routerLinkActiveOptions]="{ exact: true }"
           >
