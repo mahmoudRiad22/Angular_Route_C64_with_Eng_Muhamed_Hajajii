@@ -12,54 +12,51 @@
                     └── /contact
 -->
 <section>
-    <div class="container pb-5">
-        <div class="d-flex justify-content-center flex-column min-vh-100">
-            <div class="p-3 text-center text-bg-dark">
-                <h1 data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                    Welcome to Community page
-                </h1>
-            </div>
-            <div class="text-center d-flex justify-content-center">
-                <ul class="nav nav-pills navbar-dark bg-dark border-0 mb-0 pb-2 flex-grow-1">
-                    <li class="nav-item">
-                        <a
-                            class="nav-link rounded-3 mx-3"
-                            routerLinkActive="bg-primary text-white border-0"
-                            routerLink="/community"
-                            [routerLinkActiveOptions]="{ exact: true }"
-                            >Home</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link rounded-3 mx-3"
-                            routerLinkActive="bg-primary text-white border-0"
-                            routerLink="posts"
-                            >Posts</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link rounded-3 mx-3"
-                            routerLinkActive="bg-primary text-white border-0"
-                            routerLink="about"
-                            >About</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link rounded-3 mx-3"
-                            routerLinkActive="bg-primary text-white border-0"
-                            routerLink="contact"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-            </div>
-            <div class="rounded-bottom-4 overflow-hidden bg-danger-subtle flex-grow-1">
-                <router-outlet />
-            </div>
-        </div>
+  <div class="container pb-5">
+    <div class="d-flex justify-content-center flex-column min-vh-100">
+      <div class="p-3 text-center text-bg-dark">
+        <h1 data-bs-toggle="tooltip" data-bs-title="Default tooltip">Welcome to Community page</h1>
+      </div>
+      <div class="text-center d-flex justify-content-center">
+        <ul class="nav nav-pills navbar-dark bg-dark border-0 mb-0 pb-2 flex-grow-1">
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3 mx-3"
+              routerLinkActive="bg-primary text-white border-0"
+              routerLink="/community"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3 mx-3"
+              routerLinkActive="bg-primary text-white border-0"
+              routerLink="posts"
+              >Posts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3 mx-3"
+              routerLinkActive="bg-primary text-white border-0"
+              routerLink="about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link rounded-3 mx-3"
+              routerLinkActive="bg-primary text-white border-0"
+              routerLink="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-bottom-4 overflow-hidden bg-danger-subtle flex-grow-1">
+        <router-outlet />
+      </div>
     </div>
+  </div>
 </section>
-

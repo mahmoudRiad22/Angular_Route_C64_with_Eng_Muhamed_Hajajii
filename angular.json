@@ -1,96 +1,96 @@
 {
-    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-    "version": 1,
-    "newProjectRoot": "projects",
-    "projects": {
-        "week03-app": {
-            "projectType": "application",
-            "schematics": {
-                "@schematics/angular:component": {
-                    "skipTests": true,
-                    "type": "component"
-                }
-            },
-            "root": "projects/week03-app",
-            "sourceRoot": "projects/week03-app/src",
-            "prefix": "app",
-            "architect": {
-                "build": {
-                    "builder": "@angular/build:application",
-                    "options": {
-                        "browser": "projects/week03-app/src/main.ts",
-                        "polyfills": ["zone.js"],
-                        "tsConfig": "projects/week03-app/tsconfig.app.json",
-                        "assets": [
-                            {
-                                "glob": "**/*",
-                                "input": "projects/week03-app/public"
-                            }
-                        ],
-                        "styles": [
-                            "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                            "projects/week03-app/src/styles.css"
-                        ],
-                        "scripts": [
-                            "node_modules/@fortawesome/fontawesome-free/js/all.min.js",
-                            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-                        ]
-                    },
-                    "configurations": {
-                        "production": {
-                            "budgets": [
-                                {
-                                    "type": "initial",
-                                    "maximumWarning": "500kB",
-                                    "maximumError": "1MB"
-                                },
-                                {
-                                    "type": "anyComponentStyle",
-                                    "maximumWarning": "4kB",
-                                    "maximumError": "8kB"
-                                }
-                            ],
-                            "outputHashing": "all"
-                        },
-                        "development": {
-                            "optimization": false,
-                            "extractLicenses": false,
-                            "sourceMap": true
-                        }
-                    },
-                    "defaultConfiguration": "production"
-                },
-                "serve": {
-                    "builder": "@angular/build:dev-server",
-                    "configurations": {
-                        "production": {
-                            "buildTarget": "week03-app:build:production"
-                        },
-                        "development": {
-                            "buildTarget": "week03-app:build:development"
-                        }
-                    },
-                    "defaultConfiguration": "development"
-                },
-                "extract-i18n": {
-                    "builder": "@angular/build:extract-i18n"
-                },
-                "test": {
-                    "builder": "@angular/build:karma",
-                    "options": {
-                        "polyfills": ["zone.js", "zone.js/testing"],
-                        "tsConfig": "projects/week03-app/tsconfig.spec.json",
-                        "assets": [
-                            {
-                                "glob": "**/*",
-                                "input": "projects/week03-app/public"
-                            }
-                        ],
-                        "styles": ["projects/week03-app/src/styles.css"]
-                    }
-                }
-            }
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "week03-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
         }
+      },
+      "root": "projects/week03-app",
+      "sourceRoot": "projects/week03-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/week03-app/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/week03-app/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week03-app/public"
+              }
+            ],
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/week03-app/src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "week03-app:build:production"
+            },
+            "development": {
+              "buildTarget": "week03-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/week03-app/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week03-app/public"
+              }
+            ],
+            "styles": ["projects/week03-app/src/styles.css"]
+          }
+        }
+      }
     }
+  }
 }
