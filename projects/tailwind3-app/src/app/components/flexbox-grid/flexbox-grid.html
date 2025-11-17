@@ -364,14 +364,7 @@
   </div>
 
   <br /><br />
-  <div
-    class="relative w-full h-screen bg-fixed bg-center bg-cover"
-    [style.backgroundImage]="'url(/images/4.jpg)'"
-  >
-    <div class="absolute top-0 bottom-0 left-0 right-0 z-0 bg-black/50"></div>
-    <div class="relative z-10 text-white">
-      <h2 class="text-4xl font-bold text-center text-white">Grid playground</h2>
-      <!-- >> Grid Summary:
+  <!-- >> Grid Summary:
       ?Parent classes [6 total]:
       -- grid/inline-grid: used to activate the grid system
       -- grid-cols-*/grid-rows-*: used to control how many columns and rows of the grid structure.
@@ -383,6 +376,14 @@
       -- *-span-*: change the size of the child cell relative to its current location in the grid.
       -- *-*start-*: change the position on which the cell
       -->
+  <!-- todo: create dashboards to practice the grid design -->
+  <div
+    class="relative w-full h-screen bg-fixed bg-center bg-cover"
+    [style.backgroundImage]="'url(/images/4.jpg)'"
+  >
+    <div class="absolute top-0 bottom-0 left-0 right-0 z-0 bg-black/50"></div>
+    <div class="relative z-10 text-white">
+      <h2 class="text-4xl font-bold text-center text-white">Grid playground</h2>
 
       <div class="relative text-black">
         <!-- PARENT -->
@@ -404,41 +405,67 @@
         </div>
       </div>
       <br /><br />
-      <!-- dashboard example to practice Grid -->
-      <div class="w-11/12 px-6 py-12 mx-auto bg-gray-200">
-        <div class="grid grid-cols-12 gap-2 align-middle grid-flow-dense grid-rows-12">
-          <div class="col-span-4 row-span-3 rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">analytics overview</span>
-          </div>
-          <div class="col-span-6 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
-            
-          </div>
-          <div class="col-span-2 row-span-1 text-center text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">April 2025 </span>
-            
-          </div>
-          <div class="col-span-4 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
-            
-          </div>
-          <div class="col-span-2 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">total orders</span>
-            
-          </div>
-          <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">visitor acquisition</span>
-            
-          </div>
-          <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
-            
-          </div>
-          <div class="col-span-4 row-span-4 text-black rounded-md shadow-lg bg-gray-50">
-            <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
-            
-          </div>
+    </div>
+  </div>
+  <br /><br />
+  <!-- >> dashboard example to practice Grid 01 -->
+  <div class="w-11/12 px-6 py-12 mx-auto bg-gray-200">
+    <div class="grid grid-cols-12 gap-2 align-middle grid-flow-dense grid-rows-12">
+      <div class="col-span-4 row-span-3 rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">analytics overview</span>
+      </div>
+      <div class="col-span-6 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
+      </div>
+      <div class="col-span-2 row-span-1 text-center text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">April 2025 </span>
+      </div>
+      <div class="col-span-4 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">performance</span>
+      </div>
+      <div class="col-span-2 row-span-5 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">total orders</span>
+      </div>
+      <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">visitor acquisition</span>
+      </div>
+      <div class="col-span-4 row-span-6 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
+      </div>
+      <div class="col-span-4 row-span-4 text-black rounded-md shadow-lg bg-gray-50">
+        <span class="inline-block px-4 py-2 text-black uppercase">active users</span>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <!-- >> Dashboard example 02: -->
+  <div class="text-white bg-[#15182C] py-9">
+    <h2 class="text-4xl text-center">Dashboard 02</h2>
+    <div class="p-6">
+      <div class="grid grid-cols-12 gap-4 grid-flow-dense">
+        <div class="col-span-3  px-6 py-1 shadow-xl rounded-lg bg-[#1C2039]">
+          <p>total revenue</p>
+          <p class="font-bold">$53,450</p>
+          <p class="text-green-500"><i class="fa-solid fa-caret-up"></i>8.2%</p>
         </div>
+        <div class="col-span-3  px-6 py-1 shadow-xl rounded-lg bg-[#1C2039]">
+          <p>sales</p>
+          <p class="text-lg font-bold">2,412</p>
+          <p class="flex justify-between">
+            <span class="text-green-500"> <i class="fa-solid fa-caret-up"></i>1,7% </span>
+            <span>1,7%</span>
+          </p>
+        </div>
+        <div class="col-span-3  shadow-xl rounded-lg bg-[#1C2039]">Area number 3</div>
+        <div class="col-span-3  shadow-xl rounded-lg bg-[#1C2039]">Area number 4</div>
+        <div class="col-span-8  shadow-xl rounded-lg bg-[#1C2039]">Area number 5</div>
+        <div class="col-span-4  shadow-xl rounded-lg bg-[#1C2039]">Area number 6</div>
+        <div class="col-span-5  shadow-xl rounded-lg bg-[#1C2039]">Area number 7</div>
+        <div class="col-span-3  shadow-xl rounded-lg bg-[#1C2039]">Area number 8</div>
+        <div class="col-span-4  shadow-xl rounded-lg bg-[#1C2039]">Area number 9</div>
+        <div class="col-span-4  shadow-xl rounded-lg bg-[#1C2039]">Area number 10</div>
+        <div class="col-span-5  shadow-xl rounded-lg bg-[#1C2039]">Area number 11</div>
+        <div class="col-span-3  shadow-xl rounded-lg bg-[#1C2039]">Area number 12</div>
       </div>
     </div>
   </div>
