@@ -1,0 +1,5 @@
+/* Inside your styles.css file [projects/app-name/src/styles.css] */
+
+@tailwind base;
+@tailwind component;
+@tailwind utilities;

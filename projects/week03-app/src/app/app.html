@@ -105,9 +105,17 @@
 <!-- ****************************** -->
 
 <div class="d-flex justify-content-between flex-column vh-100">
+  <!-- add this inside you app.html -->
   <app-navbar />
   <div class="flex-grow-1">
     <router-outlet />
   </div>
   <app-footer />
 </div>
+
+<!-- 
+
+yt-dlp --playlist-start 66 --playlist-end 68 -f "bestvideo[height<=720]+bestaudio/best[height<=720]" --merge-output-format mp4 -o "D:/Downloads/%(playlist_index)s - %(title)s.%(ext)s" https://www.youtube.com/playlist?list=PLs4xH3XPr55guaS_NY0SQ6dQabpXK0xQ6 
+|| --progress-hooks powershell -c "while($true){[console]::beep(700,200); Start-Sleep -Milliseconds 500}"
+
+-->

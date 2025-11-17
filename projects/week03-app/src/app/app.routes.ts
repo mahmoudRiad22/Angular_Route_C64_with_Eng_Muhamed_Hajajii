@@ -167,6 +167,14 @@ export const routes: Routes = [
     title: 'Transfer Data'
   },
   {
+    path:"university",
+    loadComponent:() => {
+      return import('./components/university/university.component').then((m) => {
+        return m.UniversityComponent
+      })
+    }
+  },
+  {
     path: 'not-found',
     component: NotFoundComponent,
     title: 'Page Not Found',
