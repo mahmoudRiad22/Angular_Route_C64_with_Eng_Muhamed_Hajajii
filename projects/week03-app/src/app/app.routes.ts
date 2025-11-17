@@ -203,8 +203,170 @@ export const routes: Routes = [
       return import('./components/university/university.component').then((m) => {
         return m.UniversityComponent;
       });
-      
     },
+    title: 'University',
+    children: [
+      {
+        path: '',
+        redirectTo: 'engineering',
+        pathMatch: 'full',
+      },
+      {
+        path: 'engineering',
+        loadComponent: () =>
+          import('./components/university/components/engineering/engineering.component').then(
+            (m) => m.EngineeringComponent
+          ),
+        title: 'University - Engineering',
+        children: [
+          {
+            path: 'computer-science',
+            loadComponent: () =>
+              import(
+                './components/university/components/engineering/components/computer-science/computer-science.component'
+              ).then((m) => m.ComputerScienceComponent),
+            title: 'University - Computer Science',
+            children: [
+              {
+                path: 'year-1',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/engineering/components/computer-science/components/year-1/year-1.component'
+                  ).then((m) => m.Year1Component),
+                title: 'Computer Science - Year-1',
+              },
+              {
+                path: 'year-2',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/engineering/components/computer-science/components/year-2/year-2.component'
+                  ).then((m) => m.Year2Component),
+                title: 'Computer Science - Year-2',
+              },
+              {
+                path: 'year-3',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/engineering/components/computer-science/components/year-3/year-3.component'
+                  ).then((m) => m.Year3Component),
+                title: 'Computer Science - Year-3',
+              },
+            ],
+          },
+          {
+            path: 'mechanical',
+            loadComponent: () =>
+              import(
+                './components/university/components/engineering/components/mechanical/mechanical.component'
+              ).then((m) => m.MechanicalComponent),
+            title: 'University - Mechanical',
+            children: [
+              {
+                path: 'year-1',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/engineering/components/mechanical/components/year-1/year-1.component'
+                  ).then((m) => m.Year1Component),
+                title: 'Mechanical - Year-1',
+              },
+              {
+                path: 'year-2',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/engineering/components/mechanical/components/year-2/year-2.component'
+                  ).then((m) => m.Year2Component),
+                title: 'Mechanical - Year-2',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        path: 'business',
+        loadComponent: () =>
+          import('./components/university/components/business/business.component').then(
+            (m) => m.BusinessComponent
+          ),
+        title: 'University - business',
+        children: [
+          {
+            path: '',
+            redirectTo: 'finance',
+            pathMatch: 'full',
+          },
+          {
+            path: 'finance',
+            loadComponent: () =>
+              import(
+                './components/university/components/business/components/finance/fincance.component'
+              ).then((m) => m.FincanceComponent),
+            title: 'Business - Finance',
+            children: [
+              {
+                path: 'undergrad',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/business/components/finance/components/undergrad/undergrad.component'
+                  ).then((m) => m.UndergradComponent),
+                title: 'Finance - Undergrad',
+              },
+              {
+                path: 'masters',
+                loadComponent: () =>
+                  import(
+                    './components/university/components/business/components/finance/components/masters/masters.component'
+                  ).then((m) => m.MastersComponent),
+                title: 'Finance - masters',
+              },
+              {
+                path: '**',
+                redirectTo: 'not-found',
+              },
+            ],
+          },
+          {
+            path: 'marketing',
+            loadComponent: () =>
+              import(
+                './components/university/components/business/components/marketing/marketing.component'
+              ).then((m) => m.MarketingComponent),
+            title: 'Business - Marketing',
+          },
+          {
+            path: '**',
+            redirectTo: 'not-found',
+          },
+        ],
+      },
+      {
+        path: 'faculty',
+        loadComponent: () =>
+          import('./components/university/components/faculty/faculty.component').then(
+            (m) => m.FacultyComponent
+          ),
+        title: 'University - faculty',
+      },
+      {
+        path: 'profiles',
+        loadComponent: () =>
+          import('./components/university/components/profiles/profiles.component').then(
+            (m) => m.ProfilesComponent
+          ),
+        title: 'University - profiles',
+      },
+      {
+        path: 'schedules',
+        loadComponent: () =>
+          import('./components/university/components/schedules/schedules.component').then(
+            (m) => m.SchedulesComponent
+          ),
+        title: 'University - schedules',
+      },
+      {
+        path: '**',
+        redirectTo: 'not-found',
+      },
+    ],
   },
   {
     path: 'not-found',
