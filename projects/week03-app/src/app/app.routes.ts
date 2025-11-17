@@ -1,25 +1,4 @@
 import { Routes } from '@angular/router';
-import { IntroComponent } from './components/intro/intro.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CommunityComponent } from './components/community/community.component';
-import { CommunityHomeComponent } from './components/community/components/community-home/community-home.component';
-import { CommunityPostsComponent } from './components/community/components/community-posts/community-posts.component';
-import { CommunityAboutComponent } from './components/community/components/community-about/community-about.component';
-import { CommunityContactComponent } from './components/community/components/community-contact/community-contact.component';
-import { PostsFeaturedComponent } from './components/community/components/community-posts/components/posts-featured/posts-featured.component';
-import { PostsRecentComponent } from './components/community/components/community-posts/components/posts-recent/posts-recent.component';
-import { PostsPopularComponent } from './components/community/components/community-posts/components/posts-popular/posts-popular.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { ProductsComponent } from './components/admin/components/products/products.component';
-import { DashboardComponent } from './components/admin/components/dashboard/dashboard.component';
-import { OrdersComponent } from './components/admin/components/orders/orders.component';
-import { ListComponent } from './components/admin/components/products/components/list/list.component';
-import { AddComponent } from './components/admin/components/products/components/add/add.component';
-import { CategoriesComponent } from './components/admin/components/products/components/categories/categories.component';
-import { PendingComponent } from './components/admin/components/orders/components/pending/pending.component';
-import { CompletedComponent } from './components/admin/components/orders/components/completed/completed.component';
-import { ReturnsComponent } from './components/admin/components/orders/components/returns/returns.component';
-import { TransferDataComponent } from './components/transfer-data/transfer-data.component';
 
 export const routes: Routes = [
   // todo 05: create a basic routing for all the components including the "emptyPaths" and the "wrongPaths❓"
@@ -31,13 +10,14 @@ export const routes: Routes = [
   },
   {
     path: 'intro',
-    component: IntroComponent,
+    loadComponent: () => import('./components/intro/intro.component').then((m) => m.IntroComponent),
     title: 'week03 - Intro',
   },
 
   {
     path: 'community',
-    component: CommunityComponent,
+    loadComponent: () =>
+      import('./components/community/community.component').then((m) => m.CommunityComponent),
     title: 'Community',
     children: [
       {
@@ -47,12 +27,18 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        component: CommunityHomeComponent,
+        loadComponent: () =>
+          import('./components/community/components/community-home/community-home.component').then(
+            (m) => m.CommunityHomeComponent
+          ),
         title: 'Community- Home',
       },
       {
         path: 'posts',
-        component: CommunityPostsComponent,
+        loadComponent: () =>
+          import(
+            './components/community/components/community-posts/community-posts.component'
+          ).then((m) => m.CommunityPostsComponent),
         title: 'Community - Posts',
         children: [
           {
@@ -62,37 +48,52 @@ export const routes: Routes = [
           },
           {
             path: 'recent',
-            component: PostsRecentComponent,
+            loadComponent: () =>
+              import(
+                './components/community/components/community-posts/components/posts-recent/posts-recent.component'
+              ).then((m) => m.PostsRecentComponent),
             title: 'Community - Recent Posts',
           },
           {
             path: 'featured',
-            component: PostsFeaturedComponent,
+            loadComponent: () =>
+              import(
+                './components/community/components/community-posts/components/posts-featured/posts-featured.component'
+              ).then((m) => m.PostsFeaturedComponent),
             title: 'Community - Featured Posts',
           },
 
           {
             path: 'popular',
-            component: PostsPopularComponent,
+            loadComponent: () =>
+              import(
+                './components/community/components/community-posts/components/posts-popular/posts-popular.component'
+              ).then((m) => m.PostsPopularComponent),
             title: 'Community - Popular Posts',
           },
         ],
       },
       {
         path: 'about',
-        component: CommunityAboutComponent,
+        loadComponent: () =>
+          import(
+            './components/community/components/community-about/community-about.component'
+          ).then((m) => m.CommunityAboutComponent),
         title: 'Community - about',
       },
       {
         path: 'contact',
-        component: CommunityContactComponent,
+        loadComponent: () =>
+          import(
+            './components/community/components/community-contact/community-contact.component'
+          ).then((m) => m.CommunityContactComponent),
         title: 'Community - contact',
       },
     ],
   },
   {
     path: 'admin',
-    component: AdminComponent,
+    loadComponent: () => import('./components/admin/admin.component').then((m) => m.AdminComponent),
     title: 'Admin - Dashboard',
     children: [
       {
@@ -102,12 +103,18 @@ export const routes: Routes = [
       },
       {
         path: 'dashboard',
-        component: DashboardComponent,
+        loadComponent: () =>
+          import('./components/admin/components/dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent
+          ),
         title: 'Admin - Dashboard',
       },
       {
         path: 'products',
-        component: ProductsComponent,
+        loadComponent: () =>
+          import('./components/admin/components/products/products.component').then(
+            (m) => m.ProductsComponent
+          ),
         title: 'Admin - Products',
         children: [
           {
@@ -117,24 +124,36 @@ export const routes: Routes = [
           },
           {
             path: 'list',
-            component: ListComponent,
+            loadComponent: () =>
+              import('./components/admin/components/products/components/list/list.component').then(
+                (m) => m.ListComponent
+              ),
             title: 'Admin - listProducts',
           },
           {
             path: 'add',
-            component: AddComponent,
+            loadComponent: () =>
+              import('./components/admin/components/products/components/add/add.component').then(
+                (m) => m.AddComponent
+              ),
             title: 'Admin - addProducts',
           },
           {
             path: 'categories',
-            component: CategoriesComponent,
+            loadComponent: () =>
+              import(
+                './components/admin/components/products/components/categories/categories.component'
+              ).then((m) => m.CategoriesComponent),
             title: 'Admin - productsCategories',
           },
         ],
       },
       {
         path: 'orders',
-        component: OrdersComponent,
+        loadComponent: () =>
+          import('./components/admin/components/orders/orders.component').then(
+            (m) => m.OrdersComponent
+          ),
         title: 'Admin - Orders',
         children: [
           {
@@ -144,17 +163,26 @@ export const routes: Routes = [
           },
           {
             path: 'pending',
-            component: PendingComponent,
+            loadComponent: () =>
+              import(
+                './components/admin/components/orders/components/pending/pending.component'
+              ).then((m) => m.PendingComponent),
             title: 'Admin - pendingOrders',
           },
           {
             path: 'completed',
-            component: CompletedComponent,
+            loadComponent: () =>
+              import(
+                './components/admin/components/orders/components/completed/completed.component'
+              ).then((m) => m.CompletedComponent),
             title: 'Admin - completedOrders',
           },
           {
             path: 'returns',
-            component: ReturnsComponent,
+            loadComponent: () =>
+              import(
+                './components/admin/components/orders/components/returns/returns.component'
+              ).then((m) => m.ReturnsComponent),
             title: 'Admin - returnsOrders',
           },
         ],
@@ -162,21 +190,26 @@ export const routes: Routes = [
     ],
   },
   {
-    path:"transferData",
-    component:TransferDataComponent,
-    title: 'Transfer Data'
+    path: 'transferData',
+    loadComponent: () =>
+      import('./components/transfer-data/transfer-data.component').then(
+        (m) => m.TransferDataComponent
+      ),
+    title: 'Transfer Data',
   },
   {
-    path:"university",
-    loadComponent:() => {
+    path: 'university',
+    loadComponent: () => {
       return import('./components/university/university.component').then((m) => {
-        return m.UniversityComponent
-      })
-    }
+        return m.UniversityComponent;
+      });
+      
+    },
   },
   {
     path: 'not-found',
-    component: NotFoundComponent,
+    loadComponent: () =>
+      import('./components/not-found/not-found.component').then((m) => m.NotFoundComponent),
     title: 'Page Not Found',
   },
   {
