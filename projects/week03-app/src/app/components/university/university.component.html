@@ -1,18 +1,62 @@
-
-<div class="pt-5 mt-5">
-  <!-- add this inside you app.html -->
-  <p>university works!</p>
-  
-  <section>
-    <div class="grid grid-cols-12">
-      <div class="col-span-4 bg-lime-50">
-        <h3>navigation bar</h3>
-        <h1 class="text-3xl font-bold underline bg-emerald-100">Hello Tailwind!</h1>
+<div class="w-11/12 mx-auto">
+  <div class="pt-5 mt-5">
+    <!-- add this inside you app.html -->
+    <h1 class="text-3xl font-bold underline bg-emerald-100">university works!</h1>
+    <br />
+    <section class="py-6">
+      <div class="grid grid-cols-12 gap-1">
+        <div class="col-span-3 bg-lime-50 rounded-xl">
+          <ul class="flex flex-col items-center py-4 font-semibold justify-evenly">
+            <li class="my-1 capitalize rounded-lg bg-lime-200">
+              <a
+                class="inline-block p-2 text-3xl rounded-lg hover:cursor-pointer hover:bg-lime-300"
+                routerLinkActive="text-blue-400 font-bold "
+                routerLink="./engineering"
+                >engineering</a
+              >
+            </li>
+            <br />
+            <li class="my-1 capitalize rounded-lg bg-lime-100">
+              <a
+                class="inline-block p-2 text-3xl rounded-lg hover:cursor-pointer hover:bg-lime-300"
+                routerLinkActive="text-blue-400 font-bold "
+                routerLink="./business"
+                >businesses</a
+              >
+            </li>
+            <br />
+            <li class="my-1 capitalize rounded-lg bg-lime-100">
+              <a
+                class="inline-block p-2 text-3xl rounded-lg hover:cursor-pointer hover:bg-lime-300"
+                routerLinkActive="text-blue-400 font-bold "
+                routerLink="./faculty"
+                >faculty</a
+              >
+            </li>
+            <br />
+            <li class="my-1 capitalize rounded-lg bg-lime-100">
+              <a
+                class="inline-block p-2 text-3xl rounded-lg hover:cursor-pointer hover:bg-lime-300"
+                routerLinkActive="text-blue-400 font-bold "
+                routerLink="./profiles"
+                >profiles</a
+              >
+            </li>
+            <br />
+            <li class="my-1 capitalize rounded-lg bg-lime-100">
+              <a
+                class="inline-block p-2 text-3xl rounded-lg hover:cursor-pointer hover:bg-lime-300"
+                routerLinkActive="text-blue-400 font-bold "
+                routerLink="./schedules"
+                >schedules</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-9 bg-red-100 rounded-xl">
+          <router-outlet />
+        </div>
       </div>
-      <div class="col-span-8 border-r-red-100">
-        <h3>Link Content</h3>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>

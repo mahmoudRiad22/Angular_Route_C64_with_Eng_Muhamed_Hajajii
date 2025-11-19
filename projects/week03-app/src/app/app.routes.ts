@@ -220,6 +220,11 @@ export const routes: Routes = [
         title: 'University - Engineering',
         children: [
           {
+            path:"",
+            redirectTo:"computer-science",
+            pathMatch:"full"
+          },
+          {
             path: 'computer-science',
             loadComponent: () =>
               import(
@@ -227,6 +232,11 @@ export const routes: Routes = [
               ).then((m) => m.ComputerScienceComponent),
             title: 'University - Computer Science',
             children: [
+              {
+                path:"",
+                redirectTo:'year-1',
+                pathMatch:"full"
+              },
               {
                 path: 'year-1',
                 loadComponent: () =>
