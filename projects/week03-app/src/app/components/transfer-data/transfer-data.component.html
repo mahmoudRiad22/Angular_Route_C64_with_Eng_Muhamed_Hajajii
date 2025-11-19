@@ -1,8 +1,34 @@
 <div class="container mt-5">
-  <h1 class="text-center pb-5">transfer-data works!</h1>
+  <h1 class="pb-5 text-center">transfer-data works!</h1>
   <div class="text-center">
-    <button class="btn btn-success m-1" (click)="sendDataToChildren()">Send</button>
-    <button class="btn btn-warning m-1" (click)="removeDataToChildren()">remove</button>
+    <button class="m-1 btn btn-success" (click)="sendDataToChildren()">Send</button>
+    <button class="m-1 btn btn-warning" (click)="removeDataToChildren()">remove</button>
+  </div>
+
+  <div class="text-center">
+    <h5>the data that will be sent to both children with a <b><i>lorem Message</i></b></h5>
+    <section class="">
+      <div class="container text-start d-flex justify-content-center align-items-center">
+        <!-- <h1 class="">child 01</h1> -->
+        <div
+          class="p-3 mb-4 shadow UserInfor bg-info-subtle rounded-3 d-none"
+          [class.d-none]=" false "
+        >
+          <p>
+            <span class="p-1 d-block"
+              ><b><i>User Name:</i></b> Mahmoud</span
+            >
+            <span class="p-1 d-block"
+              ><b><i>User Age:</i></b> 30</span
+            >
+            <span class="p-1 d-block"
+              ><b><i>User Email:</i></b> mahmoudraid@gmail.com</span
+            >
+          </p>
+        </div>
+        <!-- <p class="text-bg-danger fs-3 fw-bold">{{ msg }}</p> -->
+      </div>
+    </section>
   </div>
   <div class="row gx-0">
     <div class="col-6">

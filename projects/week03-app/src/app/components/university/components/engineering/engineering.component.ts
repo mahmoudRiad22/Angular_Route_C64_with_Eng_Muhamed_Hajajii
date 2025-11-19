@@ -10,9 +10,14 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class EngineeringComponent {
 
-  toggleFlag = false
-  toggle():void{
-    this.toggleFlag=!this.toggleFlag
-    console.log(this.toggleFlag);
+  csToggleFlag = true
+  McToggleFlag = true
+  computerScienceToggle():void{
+    this.csToggleFlag=!this.csToggleFlag
+    console.log(this.csToggleFlag);
+  }
+  mechanicalToggle():void{
+    this.McToggleFlag=!this.McToggleFlag
+    console.log(this.McToggleFlag);
   }
 }

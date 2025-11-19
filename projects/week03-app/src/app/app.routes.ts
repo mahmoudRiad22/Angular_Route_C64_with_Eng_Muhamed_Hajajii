@@ -313,6 +313,11 @@ export const routes: Routes = [
             title: 'Business - Finance',
             children: [
               {
+                path:"",
+                redirectTo:"undergrad",
+                pathMatch:"full"
+              },
+              {
                 path: 'undergrad',
                 loadComponent: () =>
                   import(

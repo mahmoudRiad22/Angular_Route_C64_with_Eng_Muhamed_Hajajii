@@ -18,15 +18,14 @@
             </a>
 
             <button
-              (click)="toggle()"
+              (click)="computerScienceToggle()"
               class="border-red-900 rounded ms-2 group hover:bg-red-800"
               type="button"
             >
-
-            <i class="fa-solid" [ngClass]="toggleFlag ? 'fa-angles-right' : 'fa-angles-down' "></i>
+              <i class="fa-solid fa-angles-right"></i>
             </button>
           </div>
-          <ul class="flex flex-col w-3/4 mx-auto items-cente" [class.hidden]="toggleFlag">
+          <ul class="flex flex-col w-3/4 mx-auto items-cente" [class.hidden]="csToggleFlag">
             <li class="inline-block w-full text-center">
               <a
                 class="inline-block w-full p-2 my-1.5 text-center bg-red-300 border-2 border-transparent hover:bg-red-600 hover:border-red-800 rounded-xl"
@@ -55,12 +54,44 @@
         </li>
 
         <li>
-          <a
-            class="inline-block p-2 my-1.5 text-center bg-red-300 border-2 border-transparent hover:bg-red-600 hover:border-red-800 rounded-xl"
+          <div
             routerLinkActive="text-black font-semibold bg-red-600 border-red-800"
-            routerLink="./mechanical"
-            >Mechanical</a
+            class="inline-flex items-center p-2 my-1.5 text-center bg-red-300 border-2 border-transparent hover:bg-red-600 hover:border-red-800 rounded-xl w-full"
           >
+            <a
+              class=""
+              routerLinkActive="text-black font-semibold bg-red-600 border-red-800"
+              routerLink="./mechanical"
+            >
+              Mechanical
+            </a>
+
+            <button
+              (click)="mechanicalToggle()"
+              class="border-red-900 rounded ms-2 group hover:bg-red-800"
+              type="button"
+            >
+              <i class="fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+          <ul class="flex flex-col w-3/4 mx-auto items-cente" [class.hidden]="McToggleFlag">
+            <li class="inline-block w-full text-center">
+              <a
+                class="inline-block w-full p-2 my-1.5 text-center bg-red-300 border-2 border-transparent hover:bg-red-600 hover:border-red-800 rounded-xl"
+                routerLinkActive="text-black font-semibold bg-red-600 border-red-800"
+                routerLink="./mechanical/year-1"
+                >year-1</a
+              >
+            </li>
+            <li class="inline-block w-full">
+              <a
+                class="inline-block w-full p-2 my-1.5 text-center bg-red-300 border-2 border-transparent hover:bg-red-600 hover:border-red-800 rounded-xl"
+                routerLinkActive="text-black font-semibold bg-red-600 border-red-800"
+                routerLink="./mechanical/year-2"
+                >year-2</a
+              >
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
