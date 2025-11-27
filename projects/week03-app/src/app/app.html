@@ -4,111 +4,125 @@
 
 <!-- >> level 03 content "University"-->
 <!-- * level 03 nested routing -->
-<!-- todo 09: level 03
-        /university
-        ├── /engineering
-        │   ├── /computer-science
-        │   │   ├── /year-1
-        │   │   ├── /year-2
-        │   │   └── /year-3
-        │   └── /mechanical
-        │       ├── /year-1
-        │       └── /year-2
-        ├── /business
-        │   ├── /finance
-        │   │   ├── /undergrad
-        │   │   └── /masters
-        │   └── /marketing
-        └── /faculty
-        ├── /profiles
-        └── /schedules
+<!-- todo 09:✅✅✅ level 03 
+/university
+├── /engineering
+│   ├── /computer-science
+│   │   ├── /year-1
+│   │   ├── /year-2
+│   │   └── /year-3
+│   └── /mechanical
+│       ├── /year-1
+│       └── /year-2
+├── /business
+│   ├── /finance
+│   │   ├── /undergrad
+│   │   └── /masters
+│   └── /marketing
+└── /faculty
+├── /profiles
+└── /schedules
 -->
 
 <!-- >> level 04 content "Company"-->
 <!-- * level 04 nested routing -->
 <!-- todo 10: level 04
-        /company
-        ├── /projects
-        │   ├── /project-alpha
-        │   │   ├── /overview
-        │   │   ├── /team
-        │   │   │   ├── /developers
-        │   │   │   ├── /designers
-        │   │   │   └── /managers
-        │   │   ├── /documents
-        │   │   │   ├── /specifications
-        │   │   │   ├── /meeting-notes
-        │   │   │   └── /reports
-        │   │   └── /timeline
-        │   │       ├── /q1-2024
-        │   │       ├── /q2-2024
-        │   │       └── /q3-2024
-        │   └── /project-beta
-        ├── /hr
-        │   ├── /employees
-        │   └── /departments
-        └── /finance
+/company
+├── /projects
+│   ├── /project-alpha
+│   │   ├── /overview
+│   │   ├── /team
+│   │   │   ├── /developers
+│   │   │   ├── /designers
+│   │   │   └── /managers
+│   │   ├── /documents
+│   │   │   ├── /specifications
+│   │   │   ├── /meeting-notes
+│   │   │   └── /reports
+│   │   └── /timeline
+│   │       ├── /q1-2024
+│   │       ├── /q2-2024
+│   │       └── /q3-2024
+│   └── /project-beta
+├── /hr
+│   ├── /employees
+│   └── /departments
+└── /finance
 -->
 
 <!-- >> level 05 content "Government"-->
 <!-- * level 05 nested routing -->
 <!-- todo 11: level 05
-        /government
-        ├── /federal
-        │   ├── /irs
-        │   │   ├── /individuals
-        │   │   │   ├── /filing
-        │   │   │   │   ├── /w2
-        │   │   │   │   ├── /1099
-        │   │   │   │   └── /deductions
-        │   │   │   └── /payment
-        │   │   └── /businesses
-        │   │       ├── /corporations
-        │   │       └── /partnerships
-        │   └── /treasury
-        └── /state
-                ├── /california
-                └── /new-york
+/government
+├── /federal
+│   ├── /irs
+│   │   ├── /individuals
+│   │   │   ├── /filing
+│   │   │   │   ├── /w2
+│   │   │   │   ├── /1099
+│   │   │   │   └── /deductions
+│   │   │   └── /payment
+│   │   └── /businesses
+│   │       ├── /corporations
+│   │       └── /partnerships
+│   └── /treasury
+└── /state
+├── /california
+└── /new-york
 -->
 
 <!-- >> ScrollMemory -->
 <!-- *upon routing between pages, make sure you start at the top of the page -->
-<!-- todo 12: Apply scroll restoration 
-        -- explain the difference between the "top" Vs "enabled"-->
+<!-- todo 12: ✅✅✅Apply scroll restoration 
+-- explain the difference between the "top" Vs "enabled"
+?its responsible for when the routing happen 
+?the scroll bar goes back to a default state based on the values given.
+* **** it gets provided as a 2nd parameter for the router
+-->
 
 <!-- >> hash location strategy: -->
 <!-- * using the # during routing -->
-<!-- todo 13:
-        -- what is the use of hash location?
-        -- if using hash location what does it stop?
-        -- what are other things i need to know about hash location strategy?-->
+<!-- todo 13:✅✅✅
+-- what is the use of hash location?
+        ?To navigate with in the same [page].
+-- if using hash location what does it stop?
+-- what are other things i need to know about hash location strategy?-->
 
 <!-- >> with view transition: -->
 <!-- * taking snaps from the current router and the next router and transition smoothly between them -->
-<!-- todo 14: apply the view transition -->
+<!-- todo 14: ✅✅✅apply the view transition 
+?Its a function that is provided in the "configApp.ts" for the [provideRouter()]
+?it takes screenshots from the current routing and the next routing and apply a smooth transition between them.
+-->
 
-<!-- todo 15: summarize what params you learnt that're used in the provideRouter()? -->
+<!-- todo 15: ✅✅✅summarize what params you learnt that're used in the provideRouter()? 
+?1- routes
+?2- withInMemoryScroll({scrollPositionRestoration:'enable/disabled/top'})
+?3- withViewTransitions()
+-->
 <!-- >> Query params: -->
 <!-- * using the query "?" to filter a page with specific info needed -->
-<!-- todo 15: explain the idea behind the using a query params -->
+<!-- todo 15: ✅✅✅explain the idea behind the using a query params 
+?used to filter the data coming via the url
+-->
 
 <!-- >> transfer Data Intro: -->
 <!-- * combine the power of "Selectors" + "property Binding"-->
 <!-- todo 16: Create a reusable header for the TransferData Component 
-        -- create the design
-        -- make it reusable as a shared component
-        -- change the displayed name based on the active component
-        -- change the bgc image based on the active component-->
+-- create the design
+-- make it reusable as a shared component
+-- change the displayed name based on the active component
+-- change the bgc-image based on the active component-->
 
 <!-- #endregion todo lists -->
 <!-- ****************************** -->
 <!-- ****************************** -->
 
 <div class="d-flex justify-content-between flex-column min-vh-100 bg-emerald-50">
-  <!-- add this inside you app.html -->
-  <app-navbar />
-  <div class="flex-grow-1">
-    <router-outlet />
-  </div>
-  <app-footer />
+<!-- add this inside you app.html -->
+<app-navbar />
+<div class="flex-grow-1">
+<router-outlet />
+</div>
+<app-footer />
 </div>

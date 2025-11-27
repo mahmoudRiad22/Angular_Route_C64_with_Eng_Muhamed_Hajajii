@@ -1,10 +1,9 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-engineering',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgClass],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './engineering.component.html',
   styleUrl: './engineering.component.css',
 })
