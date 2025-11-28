@@ -8,17 +8,24 @@ export const routes: Routes = [
   },
   {
     path: 'nav-bars',
-    loadComponent: () =>
-      import('./components//nav-bars/nav-bars').then((m) => m.NavBars),
+    loadComponent: () => import('./components//nav-bars/nav-bars').then((m) => m.NavBars),
     title: 'Tailwind3 - Nav-Bars',
   },
   {
-    path:"flexBox-grid",
-    loadComponent:() => {
+    path: 'flexBox-grid',
+    loadComponent: () => {
       return import('./components/flexbox-grid/flexbox-grid').then((m) => {
-        return m.FlexboxGrid
-      })
-    }
+        return m.FlexboxGrid;
+      });
+    },
+  },
+  {
+    path: 'flowbite',
+    loadComponent: () => {
+      return import('./components/flowbite/flowbite').then((m) => {
+        return m.Flowbite;
+      });
+    },
   },
   {
     path: 'not-found',
@@ -30,8 +37,7 @@ export const routes: Routes = [
     title: 'Tailwind3 - 404-Page Not Found!',
   },
   {
-    path:"**",
-    redirectTo:"not-found",
-
-  }
+    path: '**',
+    redirectTo: 'not-found',
+  },
 ];
