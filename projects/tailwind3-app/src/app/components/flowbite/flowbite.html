@@ -84,7 +84,20 @@
   </div>
 </div>
 
-<div id="accordion-card" data-accordion="collapse">
+<div class="bg to-black">
+  <h3
+    class="p-8 mb-6 font-bold text-transparent bg-gradient-to-br from-red-500 via-yellow-600 to-blue-700 bg-clip-text"
+  >
+    hello world! 1
+  </h3>
+  <h3 class="p-8 mb-6 bg-gradient-to-br from-red-500 via-yellow-600 to-blue-700">hello world! 2</h3>
+  <h3 class="p-8 mb-6 bg-gradient-to-br from-red-500 via-yellow-600 to-blue-700">hello world! 3</h3>
+  <h3 class="p-8 mb-6 bg-gradient-to-br from-red-500 via-yellow-600 to-blue-700">hello world! 4</h3>
+  <h3 class="p-8 w-[90%] mb-6 bg-gradient-to-br from-red-500 via-yellow-600 to-blue-700">
+    hello world! 5
+  </h3>
+</div>
+<div id="accordion-card" data-accordion="collapse" class="p-5 bg-slate-500">
   <h2 id="accordion-card-heading-1">
     <button
       type="button"
@@ -240,4 +253,78 @@
       </ul>
     </div>
   </div>
+</div>
+
+<!-- 
+  color: [ctrl+k ctrl+g]
+    -- bg-color-50  // text-color-50
+    -- bg-color-100 // text-color-100
+    -- bg-color-200 // text-color-200
+    -- bg-color-300 // text-color-300
+    -- bg-color-400 // text-color-400
+    -- bg-color-500 // text-color-500
+    -- bg-color-600 // text-color-600
+    -- bg-color-700 // text-color-700
+    -- bg-color-800 // text-color-800
+    -- bg-color-900 // text-color-900
+    -- bg-color-950 // text-color-950
+
+  gradient: [gradient-direction from via to]
+    -- bg-gradient-{direction} 
+    -- from-color-* 
+    -- via-color-* 
+    -- to-color-*
+*      to color the text only you need 
+*        text-transparent    bg-gradient     bg-clip-text
+
+border:
+    -- border-* 
+    -- border-color 
+    -- rounded [sm, md, lg, xl, 2xl, 3xl, full(circle, pill)]
+
+  shadow:
+    -- shadow-[sm, md, lg, xl, 2xl]
+    -- shadow-color
+  
+  outline:
+    -- outline-{width}
+    -- outline-color
+    -- outline-{style}
+
+
+
+
+
+-->
+<div class="">
+  <div class="relative overflow-hidden h-96">
+    <div class="h-full transition-transform duration-700 ease-in-out" id="vertical-slides">
+      <!-- Stack slides vertically -->
+      <div class="h-full">
+        <img src="images/4.jpg" class="object-cover w-full h-full" alt="Slide 1" />
+      </div>
+      <div class="h-full">
+        <img src="images/5.jpg" class="object-cover w-full h-full" alt="Slide 2" />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button onclick="moveSlide(-1)" class="absolute transform -translate-x-1/2 top-4 left-1/2">
+      ↑
+    </button>
+    <button onclick="moveSlide(1)" class="absolute transform -translate-x-1/2 bottom-4 left-1/2">
+      ↓
+    </button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('vertical-slides');
+
+    function moveSlide(direction) {
+      const totalSlides = slides.children.length;
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateY(-${currentSlide * 100}%)`;
+    }
+  </script>
 </div>

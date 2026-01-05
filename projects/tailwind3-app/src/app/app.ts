@@ -13,8 +13,8 @@ import { initFlowbite } from 'flowbite';
 })
 export class App {
   // protected readonly title = signal('tailwind3-app');
-  // title = 'web-app';
-  // ngOnInit(): void {
-  //   initFlowbite();
-  // }
+  title = 'web-app';
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }
