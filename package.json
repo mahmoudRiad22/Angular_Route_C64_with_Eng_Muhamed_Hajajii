@@ -9,7 +9,8 @@
     "test": "ng test",
     "i:bs": "npm i bootstrap",
     "i:faw": "npm i @fortawesome/fontawesome-free",
-    "i:tw3": "npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init"
+    "i:tw3": "npm i -D tailwindcss@3 postcss autoprefixer && npx tailwindcss init",
+    "serve:ssr:week11-RxJS": "node dist/week11-RxJS/server/server.mjs"
   },
   "prettier": {
     "tabWidth": 2,
@@ -32,14 +33,20 @@
     "@angular/core": "^20.3.10",
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
+    "@angular/platform-server": "^20.3.10",
     "@angular/router": "^20.3.0",
+    "@angular/ssr": "^20.3.10",
+    "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular/build": "^20.3.10",
     "@angular/cli": "^20.3.9",
     "@angular/compiler-cli": "^20.3.0",
+    "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.17.19",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

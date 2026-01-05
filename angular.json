@@ -3,5 +3,83 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "week11-RxJS": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/week11-rx-js",
+      "sourceRoot": "projects/week11-rx-js/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/week11-rx-js/src/main.ts",
+            "tsConfig": "projects/week11-rx-js/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week11-rx-js/public"
+              }
+            ],
+            "styles": [
+              "projects/week11-rx-js/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "week11-RxJS:build:production"
+            },
+            "development": {
+              "buildTarget": "week11-RxJS:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/week11-rx-js/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/week11-rx-js/public"
+              }
+            ],
+            "styles": [
+              "projects/week11-rx-js/src/styles.css"
+            ]
+          }
+        }
+      }
+    }
   }
 }

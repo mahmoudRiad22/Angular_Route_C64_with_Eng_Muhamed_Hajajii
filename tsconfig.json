@@ -28,5 +28,25 @@
     "useTabs": false,
     "printWidth": 100,
     "singleQuote": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/week11-rx-js/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/week11-rx-js/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/week11-rx-js/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/week11-rx-js/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/week11-rx-js/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/week11-rx-js/tsconfig.spec.json"
+    }
+  ]
 }
