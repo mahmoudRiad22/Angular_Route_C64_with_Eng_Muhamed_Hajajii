@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { asapScheduler, asyncScheduler, concatAll, from, Observable, of, scheduled } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +35,20 @@ export class App {
     // subscribers.error('something went wrong❌❌');
     subscribers.next('new data 05');
   });
+
+  observable2 = scheduled(
+    [
+      'mahmoud',
+      1252,
+      'something new',
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((data) => data.json())
+        .then((data) => data),
+    ],
+    asyncScheduler
+  );
+
+  observable3 = from(fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json()));
   ngOnInit(): void {
     // >>Promises
     // console.log(this.promise1); //this will happen synchronously with state of "Pending".
@@ -78,5 +92,23 @@ export class App {
     // });
     //*//////////////////////////////////////////////////////////
     //*//////////////////////////////////////////////////////////
+    // this.observable2.subscribe({
+    //   next: (data) => {
+    //     console.log(`%c` + data, 'color: violet');
+    //   },
+    //   complete: () => {
+    //     console.log(`%c` + 'Done!!!!!!', 'color: violet');
+    //   },
+    // });
+
+    this.observable2.subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+    });
+
+    this.observable3.subscribe((data) => {
+      // console.log(data);
+    });
   }
 }
